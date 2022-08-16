@@ -201,7 +201,7 @@ themes:
   #       href: assets/dspace/images/favicons/manifest.webmanifest
 
   # # This theme will be used for styling OSPR utilizing DSapce 7.3.
-  - name: dspace
+  - name: ospr
     headTags:
     - tagName: link
 
