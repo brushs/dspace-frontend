@@ -27,6 +27,18 @@
 
   "404.page-not-found": "page not found",
 
+	"tips-for-search.head": "Tips for Searching",
+	"tips-for-search.ospr.title": "Searching the Open Science Platform Repository",
+	"tips-for-search.ospr.text": "The OSPR’s online platform  contains the full text of every article ever published by OSPR. The OSPR  is fully integrated with the OSPR Guide to Government of Canada Publications, an extensive collection of bibliographic citations from departments of Government of Canada.",
+	"tips-for-search.faceted.title": "Faceted Search",
+	"tips-for-search.faceted.text": "The OSPR’s online platform  contains the full text of every article ever published by OSPR. The OSPR  is fully integrated with the OSPR Guide to Government of Canada Publications, an extensive collection of bibliographic citations from departments of Government of Canada.",
+	"tips-for-search.advanced.title": "Advanced Search",
+	"tips-for-search.advanced.text": "The OSPR’s online platform  contains the full text of every article ever published by OSPR. The OSPR  is fully integrated with the OSPR Guide to Government of Canada Publications, an extensive collection of bibliographic citations from departments of Government of Canada.",
+	"tips-for-search.other.title": "Other Search",
+	"tips-for-search.other.text": "The OSPR’s online platform  contains the full text of every article ever published by OSPR. The OSPR  is fully integrated with the OSPR Guide to Government of Canada Publications, an extensive collection of bibliographic citations from departments of Government of Canada.",
+	
+
+
   "error-page.description.401": "unauthorized",
 
   "error-page.description.403": "forbidden",
@@ -35,7 +47,7 @@
 
   "error-page.description.404": "page not found",
 
-  "error-page.orcid.generic-error": "An error occurred during login via ORCID. Make sure you have shared your ORCID account email address with DSpace. If the error persists, contact the administrator",
+  "error-page.orcid.generic-error": "An error occurred during login via ORCID. Make sure you have shared your ORCID account email address with OSPR. If the error persists, contact the administrator",
 
   "access-status.embargo.listelement.badge": "Embargo",
 
@@ -147,8 +159,9 @@
 
   "admin.registries.metadata.breadcrumbs": "Metadata registry",
 
-  "admin.registries.metadata.description": "The metadata registry maintains a list of all metadata fields available in the repository. These fields may be divided amongst multiple schemas. However, DSpace requires the qualified Dublin Core schema.",
-
+  "admin.registries.metadata.description": "The metadata registry maintains a list of all metadata fields available in the repository. These fields may be divided amongst multiple schemas. However, OSPR requires the qualified Dublin Core schema.",
+  
+  
   "admin.registries.metadata.form.create": "Create metadata schema",
 
   "admin.registries.metadata.form.edit": "Edit metadata schema",
@@ -703,6 +716,9 @@
   "browse.metadata.subject.breadcrumbs": "Browse by Subject",
 
   "browse.metadata.title.breadcrumbs": "Browse by Title",
+  
+  "browse.next.button": "Next",
+	"browse.previous.button": "Previous",
 
   "pagination.next.button": "Next",
 
@@ -1127,6 +1143,11 @@
 
   "comcol-role.edit.delete": "Delete",
 
+  "comcol-role.delete.confirm.title": "Delete role",
+	"comcol-role.delete.confirm.info": "Are you sure you want to delete the role?",
+	"comcol-role.delete.confirm.cancel": "Cancel",
+	"comcol-role.delete.confirm.submit": "Delete",
+
   "comcol-role.edit.delete.error.title": "Failed to delete the '{{ role }}' role's group",
 
 
@@ -1326,6 +1347,7 @@
   "dso-selector.create.community.sub-level": "Create a new community in",
 
   "dso-selector.create.community.top-level": "Create a new top-level community",
+  "dso-selector.create.community.or": "or",
 
   "dso-selector.create.item.head": "New item",
 
@@ -1345,13 +1367,13 @@
 
   "dso-selector.no-results": "No {{ type }} found",
 
-  "dso-selector.placeholder": "Search for a {{ type }}",
+  "dso-selector.placeholder": "Search for a(n) {{ type }}",
 
   "dso-selector.select.collection.head": "Select a collection",
 
   "dso-selector.set-scope.community.head": "Select a search scope",
 
-  "dso-selector.set-scope.community.button": "Search all of DSpace",
+  "dso-selector.set-scope.community.button": "Search all of OSPR",
 
   "dso-selector.set-scope.community.input-header": "Search for a community or collection",
 
@@ -1441,12 +1463,13 @@
 
 
   "file-section.error.header": "Error obtaining files for this item",
+  
+  "footer.symbol": "Symbol of the Government of Canada",
 
 
+	"footer.copyright": "Government of Canada © 2021",
 
-  "footer.copyright": "copyright © 2002-{{ year }}",
-
-  "footer.link.dspace": "DSpace software",
+  "footer.link.dspace": "OSPR software",
 
   "footer.link.lyrasis": "LYRASIS",
 
@@ -1459,10 +1482,19 @@
   "footer.link.feedback":"Send Feedback",
 
 
+	"footer.link.contact-us": "Contact us",
+	"footer.link.community-list": "Communities & Collections",
+	"footer.link.browse-by-author": "Browse by Author",
+	"footer.link.browse-by-issue-date": "Browse by Issue Date",
+	"footer.link.browse-by-subject": "Browse by Subject",
+	"footer.link.browse-by-title": "Browse by Title",
+
+
+
 
   "forgot-email.form.header": "Forgot Password",
 
-  "forgot-email.form.info": "Enter Register an account to subscribe to collections for email updates, and submit new items to DSpace.",
+  "forgot-email.form.info": "Begin the process to reset your forgotten password. Please enter the following information to verify your identity in OSPR.",
 
   "forgot-email.form.email": "Email Address *",
 
@@ -1668,9 +1700,18 @@
 
   "home.title": "Home",
 
-  "home.top-level-communities.head": "Communities in DSpace",
+  "home.top-level-communities.head": "Communities in OSPR",
+	"home.top-home.head": "Open Science Publication Repository(OSPR)",
+	"home.button.help": "Help",
+	"home.button.advanced-search": "Advanced search",
+	"home.button.tips-for-searching": "Tips for searching",
+	"home.learn.more": "Learn More",
+	"home.page.description": "The Open Science Publication Repository provides free and open access to science publication and research funded by the Canadian Government.",
+	"home.page.search-tips-title": "Start your search:",
+	"home.page.search-tips": "Search examples: Title, Author, Title AND Author OR DOI number",
 
   "home.top-level-communities.help": "Select a community to browse its collections.",
+  "home.top-home.browser": "Browse the repository",
 
 
 
@@ -1702,7 +1743,7 @@
 
   "info.feedback.title": "Feedback",
 
-  "info.feedback.info": "Thanks for sharing your feedback about the DSpace system. Your comments are appreciated!",
+  "info.feedback.info": "Thanks for sharing your feedback about the OSPR system. Your comments are appreciated!",
 
   "info.feedback.email_help": "This address will be used to follow up on your feedback.",
 
@@ -1775,6 +1816,11 @@
   "item.edit.bitstreams.bundle.load.more": "Load more",
 
   "item.edit.bitstreams.bundle.name": "BUNDLE: {{ name }}",
+  "item.edit.bitstreams.bundle.name.ORIGINAL": "ORIGINAL",
+	"item.edit.bitstreams.bundle.name.THUMBNAILS": "THUMBNAILS",
+	"item.edit.bitstreams.bundle.name.TEXT": "TEXT",
+	"item.edit.bitstreams.bundle.name.LICENSE": "LICENSE",
+	"item.edit.bitstreams.bundle.name.CC-LICENSE": "CC-LICENSE",
 
   "item.edit.bitstreams.discard-button": "Discard",
 
@@ -1833,6 +1879,7 @@
   "item.edit.delete.confirm": "Delete",
 
   "item.edit.delete.description": "Are you sure this item should be completely deleted? Caution: At present, no tombstone would be left.",
+  "item.edit.delete.virtual-metadata.open": "Open virtual metadata",
 
   "item.edit.delete.error": "An error occurred while deleting the item",
 
@@ -2166,11 +2213,11 @@
 
   "item.page.abstract": "Abstract",
 
-  "item.page.author": "Authors",
+  "item.page.author": "Author(s)",
 
-  "item.page.citation": "Citation",
+  "item.page.citation": "Citation(s)",
 
-  "item.page.collections": "Collections",
+  "item.page.collections": "Collection(s)",
 
   "item.page.collections.loading": "Loading...",
 
@@ -2511,13 +2558,15 @@
 
   "loading.top-level-communities": "Loading top-level communities...",
 
+  "Lang.title": "Language",
+
 
 
   "login.form.email": "Email address",
 
   "login.form.forgot-password": "Have you forgotten your password?",
 
-  "login.form.header": "Please log in to DSpace",
+  "login.form.header": "Please log in to OSPR",
 
   "login.form.new-user": "New user? Click here to register.",
 
@@ -2539,7 +2588,7 @@
 
 
 
-  "logout.form.header": "Log out from DSpace",
+  "logout.form.header": "Log out from OSPR",
 
   "logout.form.submit": "Log out",
 
@@ -2549,7 +2598,7 @@
 
   "menu.header.admin": "Management",
 
-  "menu.header.image.logo": "Repository logo",
+  "menu.header.image.logo": "Government of Canada",
 
   "menu.header.admin.description": "Management menu",
 
@@ -2577,7 +2626,7 @@
 
   "menu.section.browse_community_by_title": "By Title",
 
-  "menu.section.browse_global": "All of DSpace",
+  "menu.section.browse_global": "All of OSPR",
 
   "menu.section.browse_global_by_author": "By Author",
 
@@ -2730,7 +2779,7 @@
   "metadata-export-search.submit.error": "Starting the export has failed",
 
 
-  "mydspace.breadcrumbs": "MyDSpace",
+  "mydspace.breadcrumbs": "MyOSPR",
 
   "mydspace.description": "",
 
@@ -2786,7 +2835,7 @@
 
   "mydspace.results.no-uri": "No Uri",
 
-  "mydspace.search-form.placeholder": "Search in mydspace...",
+  "mydspace.search-form.placeholder": "Search in myOSPR...",
 
   "mydspace.show.workflow": "Workflow tasks",
 
@@ -2802,7 +2851,7 @@
 
   "mydspace.status.workspace": "Workspace",
 
-  "mydspace.title": "MyDSpace",
+  "mydspace.title": "MyOSPR",
 
   "mydspace.upload.upload-failed": "Error creating new workspace. Please verify the content uploaded before retry.",
 
@@ -2818,7 +2867,7 @@
 
 
 
-  "nav.browse.header": "All of DSpace",
+  "nav.browse.header": "All of OSPR",
 
   "nav.community-browse.header": "By Community",
 
@@ -2830,7 +2879,7 @@
 
   "nav.main.description": "Main navigation bar",
 
-  "nav.mydspace": "MyDSpace",
+  "nav.mydspace": "MyOSPR",
 
   "nav.profile": "Profile",
 
@@ -2863,7 +2912,8 @@
 
   "orgunit.page.titleprefix": "Organizational Unit: ",
 
-
+	"pagination.button.prev": "Previous",
+	"pagination.button.next": "Next",
 
   "pagination.options.description": "Pagination options",
 
@@ -2926,6 +2976,10 @@
   "process.new.parameter.file.upload-button": "Select file...",
 
   "process.new.parameter.file.required": "Please select a file",
+  
+  "process.new.parameter.add.parameter": "Add a parameter...",
+	"process.new.parameter.input.value": "Parameter value",
+	"process.new.parameter.remove.parameter": "Remove parameter",
 
   "process.new.parameter.string.required": "Parameter value is required",
 
@@ -2983,13 +3037,13 @@
 
 
 
-  "process.overview.table.finish" : "Finish time (UTC)",
+  "process.overview.table.finish" : "Finish time",
 
   "process.overview.table.id" : "Process ID",
 
   "process.overview.table.name" : "Name",
 
-  "process.overview.table.start" : "Start time (UTC)",
+  "process.overview.table.start" : "Start time",
 
   "process.overview.table.status" : "Status",
 
@@ -3165,7 +3219,7 @@
 
   "register-page.registration.header": "New user registration",
 
-  "register-page.registration.info": "Register an account to subscribe to collections for email updates, and submit new items to DSpace.",
+  "register-page.registration.info": "Register an account to subscribe to collections for email updates, and submit new items to OSPR.",
 
   "register-page.registration.email": "Email Address *",
 
@@ -3193,7 +3247,7 @@
 
   "relationships.add.error.title": "Unable to add relationship",
 
-  "relationships.isAuthorOf": "Authors",
+  "relationships.isAuthorOf": "Author(s)",
 
   "relationships.isAuthorOf.Person": "Authors (persons)",
 
@@ -3207,7 +3261,7 @@
 
   "relationships.isOrgUnitOf": "Organizational Units",
 
-  "relationships.isPersonOf": "Authors",
+  "relationships.isPersonOf": "Author(s)",
 
   "relationships.isProjectOf": "Research Projects",
 
@@ -3232,9 +3286,9 @@
 
   "repository.image.logo": "Repository logo",
 
-  "repository.title.prefix": "DSpace Angular :: ",
+  "repository.title.prefix": "OSPR :: ",
 
-  "repository.title.prefixDSpace": "DSpace Angular ::",
+  "repository.title.prefixDSpace": "OSPR ::",
 
 
   "resource-policies.add.button": "Add",
@@ -3567,7 +3621,7 @@
 
   "search.form.search_dspace": "All repository",
 
-  "search.form.scope.all": "All of DSpace",
+  "search.form.scope.all": "All of OSPR",
 
 
 
@@ -3709,9 +3763,9 @@
 
   "submission.import-external.title.none": "Import metadata from an external source",
 
-  "submission.import-external.page.hint": "Enter a query above to find items from the web to import in to DSpace.",
+  "submission.import-external.page.hint": "Enter a query above to find items from the web to import in to OSPR.",
 
-  "submission.import-external.back-to-my-dspace": "Back to MyDSpace",
+  "submission.import-external.back-to-my-dspace": "Back to MyOSPR",
 
   "submission.import-external.search.placeholder": "Search the external source",
 
@@ -4062,6 +4116,9 @@
   "submission.sections.ccLicense.link": "You’ve selected the following license:",
 
   "submission.sections.ccLicense.confirmation": "I grant the license above",
+  
+  "submission.sections.ccLicense.info.title": "Help information",
+	"submission.sections.ccLicense.info.close": "Close",
 
   "submission.sections.general.add-more": "Add more",
 
@@ -4139,6 +4196,7 @@
   "submission.sections.toggle.open": "Open section",
 
   "submission.sections.toggle.close": "Close section",
+  "submission.sections.section.remove.title": "Remove section",
 
   "submission.sections.toggle.aria.open": "Expand {{sectionHeader}} section",
 
@@ -4377,7 +4435,7 @@
 
 
 
-  "title": "DSpace",
+  "title": "OSPR",
 
 
 
@@ -4719,5 +4777,9 @@
   "person.orcid.registry.queue": "ORCID Registry Queue",
 
   "person.orcid.registry.auth": "ORCID Authorizations",
+
+
+
+  
 
 }
