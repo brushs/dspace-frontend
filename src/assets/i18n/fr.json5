@@ -51,6 +51,36 @@
   // "access-status.unknown.listelement.badge": "Unknown",
   "access-status.unknown.listelement.badge": "Inconnu",
 
+  //"tips-for-search.head": "Tips for Searching",
+  // "access-status.embargo.listelement.badge": "Embargo",
+  "tips-for-search.head": "Conseils pour la recherche",
+  "access-status.embargo.listelement.badge": "Restriction temporaire",
+  //"tips-for-search.ospr.title": "Searching the Open Science Platform Repository",
+  // "access-status.metadata.only.listelement.badge": "Metadata only",
+  "tips-for-search.ospr.title": "Recherche dans le publication de la science ouverte",
+  "access-status.metadata.only.listelement.badge": "Métadonnées seulement",
+  //"tips-for-search.ospr.text": "The OSPR’s online platform  contains the full text of every article ever published by OSPR. The OSPR  is fully integrated with the OSPR Guide to Government of Canada Publications, an extensive collection of bibliographic citations from departments of Government of Canada.",
+  // "access-status.open.access.listelement.badge": "Open Access",
+  "tips-for-search.ospr.text": "La plate-forme en ligne de l’PPSO contient le texte intégral de chaque article jamais publié par l’PPSO. L’PPSO est entièrement intégré au Guide PPSO des publications du gouvernement du Canada, une vaste collection de citations bibliographiques des ministères du gouvernement du Canada.",
+  "access-status.open.access.listelement.badge": "Accès libre",
+  //"tips-for-search.faceted.title": "Faceted Search",
+  // "access-status.restricted.listelement.badge": "Restricted",
+  "tips-for-search.faceted.title": "Recherche à facettes",
+
+    //"tips-for-search.faceted.text": "The OSPR’s online platform  contains the full text of every article ever published by OSPR. The OSPR  is fully integrated with the OSPR Guide to Government of Canada Publications, an extensive collection of bibliographic citations from departments of Government of Canada.",
+  // "access-status.unknown.listelement.badge": "Unknown",
+  "tips-for-search.faceted.text": "La plate-forme en ligne de l’PPSO contient le texte intégral de chaque article jamais publié par l’PPSO. L’PPSO est entièrement intégré au Guide PPSO des publications du gouvernement du Canada, une vaste collection de citations bibliographiques des ministères du gouvernement du Canada.",
+  "access-status.unknown.listelement.badge": "Inconnu",
+  //"tips-for-search.advanced.title": "Advanced Search",
+  "tips-for-search.advanced.title": "Recherche avancée",
+  //"tips-for-search.advanced.text": "The OSPR’s online platform  contains the full text of every article ever published by OSPR. The OSPR  is fully integrated with the OSPR Guide to Government of Canada Publications, an extensive collection of bibliographic citations from departments of Government of Canada.",
+  "tips-for-search.advanced.text": "La plate-forme en ligne de l’PPSO contient le texte intégral de chaque article jamais publié par l’PPSO. L’PPSO est entièrement intégré au Guide PPSO des publications du gouvernement du Canada, une vaste collection de citations bibliographiques des ministères du gouvernement du Canada.",
+  //"tips-for-search.other.title": "Other Search",
+  "tips-for-search.other.title": "Autre recherche",
+  
+  //"tips-for-search.other.title": "The OSPR’s online platform  contains the full text of every article ever published by OSPR. The OSPR  is fully integrated with the OSPR Guide to Government of Canada Publications, an extensive collection of bibliographic citations from departments of Government of Canada.",
+  "tips-for-search.other.text": "La plate-forme en ligne de l’PPSO contient le texte intégral de chaque article jamais publié par l’PPSO. L’PPSO est entièrement intégré au Guide PPSO des publications du gouvernement du Canada, une vaste collection de citations bibliographiques des ministères du gouvernement du Canada.",
+
   // "admin.curation-tasks.breadcrumbs": "System curation tasks",
   "admin.curation-tasks.breadcrumbs": "Tâches de conservation système",
 
@@ -198,8 +228,8 @@
   // "admin.registries.metadata.breadcrumbs": "Metadata registry",
   "admin.registries.metadata.breadcrumbs": "Registre de métadonnées",
 
-  // "admin.registries.metadata.description": "The metadata registry maintains a list of all metadata fields available in the repository. These fields may be divided amongst multiple schemas. However, DSpace requires the qualified Dublin Core schema.",
-  "admin.registries.metadata.description": "Le registre de métadonnées présente une liste à jour de tous les champs de métadonnées disponibles dans le dépôt. Ces champs peuvent être répartis entre plusieurs schémas. Le schéma Dublin Core qualifié est toutefois requis dans DSpace.",
+  // "admin.registries.metadata.description": "The metadata registry maintains a list of all metadata fields available in the repository. These fields may be divided amongst multiple schemas. However, OSPR requires the qualified Dublin Core schema.",
+  "admin.registries.metadata.description": "Le registre de métadonnées présente une liste à jour de tous les champs de métadonnées disponibles dans le dépôt. Ces champs peuvent être répartis entre plusieurs schémas. Le schéma Dublin Core qualifié est toutefois requis dans OSPR.",
 
   // "admin.registries.metadata.form.create": "Create metadata schema",
   "admin.registries.metadata.form.create": "Ajouter un schéma de métadonnées",
@@ -1581,6 +1611,16 @@
   // "comcol-role.edit.delete": "Delete",
   "comcol-role.edit.delete": "Supprimer",
 
+  //OSPR UI-13 issue 291
+  //"comcol-role.delete.confirm.title": "Delete role",
+  "comcol-role.delete.confirm.title": "Supprimer le rôle",
+  //"comcol-role.delete.confirm.info": "Are you sure you want to delete the role?",
+  "comcol-role.delete.confirm.info": "Êtes-vous sûr de vouloir supprimer le rôle ?",
+  //"comcol-role.delete.confirm.cancel": "Cancel",
+  "comcol-role.delete.confirm.cancel": "Annuler",
+  //"comcol-role.delete.confirm.submit": "Delete",
+  "comcol-role.delete.confirm.submit": "Supprimer",
+
   // "comcol-role.edit.community-admin.name": "Administrators",
   "comcol-role.edit.community-admin.name": "Administrateurs",
 
@@ -1830,6 +1870,9 @@
   // "dso-selector.create.community.top-level": "Create a new top-level community",
   "dso-selector.create.community.top-level": "Créer une nouvelle communauté de 1er niveau",
 
+   // "dso-selector.create.community.or": "or",
+  "dso-selector.create.community.or": "ou",
+
   // "dso-selector.create.item.head": "New item",
   "dso-selector.create.item.head": "Nouvel Item",
 
@@ -1866,8 +1909,8 @@
   // "dso-selector.set-scope.community.head": "Select a search scope",
   "dso-selector.set-scope.community.head": "Sélectionner un champ de recherche",
 
-  // "dso-selector.set-scope.community.button": "Search all of DSpace",
-  "dso-selector.set-scope.community.button": "Chercher dans toutes les collections",
+  // "dso-selector.set-scope.community.button": "Search all of OSRP",
+  "dso-selector.set-scope.community.button": "Chercher dans toutes les collections OSPR",
 
   // "dso-selector.set-scope.community.input-header": "Search for a community or collection",
   "dso-selector.set-scope.community.input-header": "Chercher une communauté ou une collection",
@@ -1971,11 +2014,15 @@
   // "file-section.error.header": "Error obtaining files for this item",
   "file-section.error.header": "Erreur lors de la récupération des fichiers liés à cet Item",
 
+   //"footer.symbol": "Symbol of the Government of Canada",
   // "footer.copyright": "copyright © 2002-{{ year }}",
+  "footer.symbol": "Symbole du gouvernement du Canada",
   "footer.copyright": "copyright © 2002-{{ year }}",
+  // "footer.copyright": "copyright © 2002-{{ year }}",
+  "footer.copyright": "Gouvernement du Canada © 2021",
 
-  // "footer.link.dspace": "DSpace software",
-  "footer.link.dspace": "Logiciel DSpace",
+  // "footer.link.dspace": "OSPR software",
+  "footer.link.dspace": "Logiciel OSPR",
 
   // "footer.link.lyrasis": "LYRASIS",
   "footer.link.lyrasis": "LYRASIS",
@@ -1992,11 +2039,29 @@
   // "footer.link.feedback":"Send Feedback",
   "footer.link.feedback": "Envoyer un commentaire",
 
+  
+
+  // "footer.link.contact-us": "Contact us",
+  "footer.link.contact-us": "Nous contacter",
+  // "footer.link.community-list": "Communities & Collections",
+  "footer.link.community-list": "Communautés & Collections",
+  // "footer.link.browse-by-author": "Browse by Author",
+  "footer.link.browse-by-author": "Parcourir par Auteur",
+  "footer.link.feedback": "Envoyer un commentaire",
+  // "footer.link.browse-by-issue-date": "Browse by Issue Date",
+  "footer.link.browse-by-issue-date": "Parcourir par Date de publication",
+  // "footer.link.browse-by-subject": "Browse by Subject",
+  "footer.link.browse-by-subject": "Parcourir par Sujet",
+  // "footer.link.browse-by-title": "Browse by Title",
+"footer.link.browse-by-title": "Parcourir par Titre",
+
+
+
   // "forgot-email.form.header": "Forgot Password",
   "forgot-email.form.header": "Mot de passe oublié",
 
-  // "forgot-email.form.info": "Enter Register an account to subscribe to collections for email updates, and submit new items to DSpace.",
-  "forgot-email.form.info": "Créer un compte pour vous abonner à des collections afin de recevoir des mises à jour via courrier électronique ainsi que pour déposer de nouveaux Items dans DSpace.",
+  // "forgot-email.form.info": "Enter Register an account to subscribe to collections for email updates, and submit new items to OSPR.",
+  "forgot-email.form.info": "Créer un compte pour vous abonner à des collections afin de recevoir des mises à jour via courrier électronique ainsi que pour déposer de nouveaux Items dans OSPR.",
 
   // "forgot-email.form.email": "Email Address *",
   "forgot-email.form.email": "Adresse électronique *",
@@ -2229,8 +2294,26 @@
   // "home.title": "Home",
   "home.title": "Accueil",
 
-  // "home.top-level-communities.head": "Communities in DSpace",
-  "home.top-level-communities.head": "Communautés dans DSpace",
+  // "home.top-level-communities.head": "Communities in OSPR",
+  "home.top-level-communities.head": "Communautés dans OSPR",
+
+
+  //"home.top-home.head": "Open Science Publication Repository",
+  "home.top-home.head": "Platforme de publication de la science ouverte(PPSO)",
+  //"home.learn.more": "Learn More",
+  "home.learn.more": "Apprendre encore plus",
+  //"home.page.description":"The Open Science Publication Repository provides free and open access to science publication and research funded by the Canadian Government."
+  "home.page.description":"La Platforme de publication de la science ouverte offre un accès gratuit et ouvert aux publications et recherches scientifiques financées par le gouvernement canadien.",
+  //"home.page.search-tips-title": "Start your search:",
+  "home.page.search-tips-title": "Commencez votre recherche:",
+  //"home.page.search-tips": "Search examples: Title, Author, Title AND Author OR DOI number",
+  "home.page.search-tips": "Exemples de recherche: Titre, Auteur, Titre AND Auteur OR numéro DOI",
+  //"home.top-home.browser": "Browse the repository",
+  "home.top-home.browser": "Parcourir le repertoire",
+  //"home.search-form.placeholder": "Search the repository ...",
+  "home.search-form.placeholder": "Rechercher dans le référentiel ...",
+
+
 
   // "home.top-level-communities.help": "Select a community to browse its collections.",
   "home.top-level-communities.help": "Sélectionner une communauté pour parcourir les collections sous-jacentes.",
@@ -2277,8 +2360,8 @@
   // "info.feedback.title": "Feedback",
   "info.feedback.title": "Votre avis",
 
-  // "info.feedback.info": "Thanks for sharing your feedback about the DSpace system. Your comments are appreciated!",
-  "info.feedback.info": "Merci de nous faire part de votre avis sur le système DSpace. Vos commentaires sont appréciés !",
+  // "info.feedback.info": "Thanks for sharing your feedback about the OSPR system. Your comments are appreciated!",
+  "info.feedback.info": "Merci de nous faire part de votre avis sur le système OSPR. Vos commentaires sont appréciés !",
 
   // "info.feedback.email_help": "This address will be used to follow up on your feedback.",
   "info.feedback.email_help": "Cette adresse sera utilisée pour donner suite à vos commentaires.",
@@ -2457,6 +2540,9 @@
   // "item.edit.delete.description": "Are you sure this item should be completely deleted? Caution: At present, no tombstone would be left.",
   "item.edit.delete.description": "Êtes-vous certain(e) de vouloir complètement supprimer cet Item ? Attention, il n'y aura pas de retour en arrière possible.",
 
+  // "item.edit.delete.mvirtual-metadataetadata.open": "Open virtual metadata",
+  "item.edit.delete.virtual-metadata.open": "Ouvrir les métadonnées virtuelles",
+  
   // "item.edit.delete.error": "An error occurred while deleting the item",
   "item.edit.delete.error": "Une erreur s'est produite lors de la suppression de l'Item",
 
@@ -2888,6 +2974,9 @@
 
   // "item.page.description": "Description",
   "item.page.description": "Description",
+
+  // "item.page.edit": "Edit this item",
+  "item.page.edit": "Éditer cet Item",
 
   // "item.page.journal-issn": "Journal ISSN",
   "item.page.journal-issn": "ISSN de la revue",
@@ -3363,14 +3452,17 @@
   // "loading.top-level-communities": "Loading top-level communities...",
   "loading.top-level-communities": "Communautés de 1er niveau en cours de chargement...",
 
+  // "Lang.title": "Language",
+  "Lang.title": "Langue",
+
   // "login.form.email": "Email address",
   "login.form.email": "Adresse électronique",
 
   // "login.form.forgot-password": "Have you forgotten your password?",
   "login.form.forgot-password": "Mot de passe oublié ?",
 
-  // "login.form.header": "Please log in to DSpace",
-  "login.form.header": "Se connecter à DSpace",
+  // "login.form.header": "Please log in to OSPR",
+  "login.form.header": "Se connecter à OSPR",
 
   // "login.form.new-user": "New user? Click here to register.",
   "login.form.new-user": "Pas encore de compte ? Cliquer ici pour vous enregistrer.",
@@ -3396,8 +3488,8 @@
   // "login.breadcrumbs": "Login",
   "login.breadcrumbs": "Connexion",
 
-  // "logout.form.header": "Log out from DSpace",
-  "logout.form.header": "Se déconnecter de DSpace",
+  // "logout.form.header": "Log out from OSPR",
+  "logout.form.header": "Se déconnecter de OSPR",
 
   // "logout.form.submit": "Log out",
   "logout.form.submit": "Se déconnecter",
@@ -3408,8 +3500,9 @@
   // "menu.header.admin": "Management",
   "menu.header.admin": "Administration",
 
-  // "menu.header.image.logo": "Repository logo",
-  "menu.header.image.logo": "Logo du site",
+  // "menu.header.image.logo": "Government of Canada",
+  "menu.header.image.logo":  "Gouvernement du Canada",
+
 
   // "menu.header.admin.description": "Management menu",
   "menu.header.admin.description": "Menu d'administration",
@@ -3441,8 +3534,8 @@
   // "menu.section.browse_community_by_title": "By Title",
   "menu.section.browse_community_by_title": "Titre",
 
-  // "menu.section.browse_global": "All of DSpace",
-  "menu.section.browse_global": "Tout DSpace",
+  // "menu.section.browse_global": "All of OSPR",
+  "menu.section.browse_global": "Tout OSPR",
 
   // "menu.section.browse_global_by_author": "By Author",
   "menu.section.browse_global_by_author": "Auteur",
@@ -3621,8 +3714,8 @@
   // "menu.section.workflow": "Administer Workflow",
   "menu.section.workflow": "Workflow Administrateur",
 
-  // "mydspace.breadcrumbs": "MyDSpace",
-  "mydspace.breadcrumbs": "Mon compte DSpace",
+  // "mydspace.breadcrumbs": "MyOSPR",
+  "mydspace.breadcrumbs": "Mon compte OSPR",
 
   // "mydspace.description": "",
   "mydspace.description": "",
@@ -3705,8 +3798,8 @@
   // "mydspace.results.no-uri": "No Uri",
   "mydspace.results.no-uri": "Aucune URL",
 
-  // "mydspace.search-form.placeholder": "Search in mydspace...",
-  "mydspace.search-form.placeholder": "Rechercher dans mon compte DSpace...",
+  // "mydspace.search-form.placeholder": "Search in myOSPR...",
+  "mydspace.search-form.placeholder": "Rechercher dans mon compte OSPR...",
 
   // "mydspace.show.workflow": "Workflow tasks",
   "mydspace.show.workflow": "Tâches du Workflow",
@@ -3729,8 +3822,8 @@
   // "mydspace.status.workspace": "Workspace",
   "mydspace.status.workspace": "Espace de travail",
 
-  // "mydspace.title": "MyDSpace",
-  "mydspace.title": "Mon compte DSpace",
+  // "mydspace.title": "MyOSPR",
+  "mydspace.title": "Mon compte OSPR",
 
   // "mydspace.upload.upload-failed": "Error creating new workspace. Please verify the content uploaded before retry.",
   "mydspace.upload.upload-failed": "Erreur à la création de l'espace de travail. Veuillez vérifier le contenu téléchargé avant de réessayer.",
@@ -3750,8 +3843,8 @@
   // "mydspace.view-btn": "View",
   "mydspace.view-btn": "Afficher",
 
-  // "nav.browse.header": "All of DSpace",
-  "nav.browse.header": "Tout Dspace",
+  // "nav.browse.header": "All of OSPR",
+  "nav.browse.header": "Tout OSPR",
 
   // "nav.community-browse.header": "By Community",
   "nav.community-browse.header": "Par communauté",
@@ -3768,8 +3861,8 @@
   // "nav.main.description": "Main navigation bar",
   "nav.main.description": "Barre de navigation principale",
 
-  // "nav.mydspace": "MyDSpace",
-  "nav.mydspace": "Mon compte DSpace",
+  // "nav.mydspace": "MyOSPR",
+  "nav.mydspace": "Mon compte OSPR",
 
   // "nav.profile": "Profile",
   "nav.profile": "Profil",
@@ -3815,6 +3908,11 @@
 
   // "orgunit.page.titleprefix": "Organizational Unit: ",
   "orgunit.page.titleprefix": "Structure Organisationnelle : ",
+
+  // "pagination.button.prev": "Previous",
+  "pagination.button.prev": "Précédent",
+  // "pagination.button.next": "Next",
+  "pagination.button.next": "Suivant",
 
   // "pagination.options.description": "Pagination options",
   "pagination.options.description": "Options de pagination",
@@ -3897,6 +3995,13 @@
   // "process.new.parameter.file.required": "Please select a file",
   "process.new.parameter.file.required": "Veuillez sélectionner un fichier",
 
+  // "process.new.parameter.add.parameter": "Add a parameter...",
+  "process.new.parameter.add.parameter": "Ajouter un paramètre...",
+  // "process.new.parameter.parameter.value": "Parameter value",
+  "process.new.parameter.input.value": "Valeur du paramètre",
+  // "process.new.parameter.remove.parameter": "Remove parameter",
+  "process.new.parameter.remove.parameter": "Supprimer le paramètre",
+
   // "process.new.parameter.string.required": "Parameter value is required",
   "process.new.parameter.string.required": "Veuillez spécifier un paramètre",
 
@@ -3975,8 +4080,8 @@
   // "process.detail.create": "Create similar process",
   "process.detail.create": "Créer un processus similaire",
 
-  // "process.overview.table.finish": "Finish time (UTC)",
-  "process.overview.table.finish": "Heure de fin (TUC)",
+  // "process.overview.table.finish": "Finish time",
+  "process.overview.table.finish": "Heure de fin",
   
   // "process.overview.table.id": "Process ID",
   "process.overview.table.id": "ID du processus",
@@ -3984,8 +4089,8 @@
   // "process.overview.table.name": "Name",
   "process.overview.table.name": "Nom",
 
-  // "process.overview.table.start": "Start time (UTC)",
-  "process.overview.table.start": "Heure de début (TUC)",
+  // "process.overview.table.start": "Start time",
+  "process.overview.table.start": "Heure de début",
   
   // "process.overview.table.status": "Status",
   "process.overview.table.status": "Statut",
@@ -4227,8 +4332,8 @@
   // "register-page.registration.header": "New user registration",
   "register-page.registration.header": "Inscription d'un nouvel utilisateur",
 
-  // "register-page.registration.info": "Register an account to subscribe to collections for email updates, and submit new items to DSpace.",
-  "register-page.registration.info": "Créer un compte pour pouvoir vous abonner aux collections et recevoir les nouveautés via courrier électronique ainsi que déposer de nouveaux Items dans DSpace.",
+  // "register-page.registration.info": "Register an account to subscribe to collections for email updates, and submit new items to OSPR.",
+  "register-page.registration.info": "Créer un compte pour pouvoir vous abonner aux collections et recevoir les nouveautés via courrier électronique ainsi que déposer de nouveaux Items dans OSPR.",
 
   // "register-page.registration.email": "Email Address *",
   "register-page.registration.email": "Adresse électronique *",
@@ -4266,8 +4371,8 @@
   // "relationships.add.error.title": "Unable to add relationship",
   "relationships.add.error.title": "Impossible d'ajouter la relation",
 
-  // "relationships.isAuthorOf": "Authors",
-  "relationships.isAuthorOf": "Auteurs",
+  // "relationships.isAuthorOf": "Author(s)",
+  "relationships.isAuthorOf": "Auteur(s)",
 
   // "relationships.isAuthorOf.Person": "Authors (persons)",
   "relationships.isAuthorOf.Person": "Auteurs (personnes)",
@@ -4287,8 +4392,8 @@
   // "relationships.isOrgUnitOf": "Organizational Units",
   "relationships.isOrgUnitOf": "Structures organisationnelles",
 
-  // "relationships.isPersonOf": "Authors",
-  "relationships.isPersonOf": "Auteurs",
+  // "relationships.isPersonOf": "Author(s)",
+  "relationships.isPersonOf": "Auteur(s)",
 
   // "relationships.isProjectOf": "Research Projects",
   "relationships.isProjectOf": "Projets de recherche",
@@ -4323,11 +4428,11 @@
   // "repository.image.logo": "Repository logo",
   "repository.image.logo": "Logo du dépôt",
 
-  // "repository.title.prefix": "DSpace Angular :: ",
-  "repository.title.prefix": "DSpace Angular :: ",
+  // "repository.title.prefix": "OSPR :: ",
+  "repository.title.prefix": "OSPR :: ",
 
-  // "repository.title.prefixDSpace": "DSpace Angular ::",
-  "repository.title.prefixDSpace": "DSpace Angular :: ",
+  // "repository.title.prefixDSpace": "OSPR ::",
+  "repository.title.prefixDSpace": "OSPR :: ",
 
   // "resource-policies.add.button": "Add",
   "resource-policies.add.button": "Ajouter",
@@ -4785,11 +4890,11 @@
   // "search.form.search": "Search",
   "search.form.search": "Recherche",
 
-  // "search.form.search_dspace": "All repository",
-  "search.form.search_dspace": "Recherche dans DSpace",
+  // "search.form.search_dspace": "All of OSPR",
+  "search.form.search_dspace": "Recherche dans OSPR",
 
-  // "search.form.scope.all": "All of DSpace",
-  "search.form.scope.all": "Tout le dépôt DSpace",
+  // "search.form.scope.all": "All of OSPR",
+  "search.form.scope.all": "Tout le dépôt OSPR",
 
   // "search.results.head": "Search Results",
   "search.results.head": "Résultats de recherche",
@@ -4980,11 +5085,11 @@
   // "submission.import-external.title.none": "Import metadata from an external source",
   "submission.import-external.title.none": "Importer les métadonnées depuis une source externe",
 
-  // "submission.import-external.page.hint": "Enter a query above to find items from the web to import in to DSpace.",
-  "submission.import-external.page.hint": "Entrer votre recherche ci-dessus pour rechercher des éléments du web à importer dans DSpace",
+  // "submission.import-external.page.hint": "Enter a query above to find items from the web to import in to OSPR.",
+  "submission.import-external.page.hint": "Entrer votre recherche ci-dessus pour rechercher des éléments du web à importer dans OSPR",
 
-  // "submission.import-external.back-to-my-dspace": "Back to MyDSpace",
-  "submission.import-external.back-to-my-dspace": "Retour à mon compte DSpace",
+  // "submission.import-external.back-to-my-dspace": "Back to MyOSPR",
+  "submission.import-external.back-to-my-dspace": "Retour à mon compte MyOSPR",
 
   // "submission.import-external.search.placeholder": "Search the external source",
   "submission.import-external.search.placeholder": "Recherche de la source externe",
@@ -5424,6 +5529,11 @@
   // "submission.sections.ccLicense.confirmation": "I grant the license above",
   "submission.sections.ccLicense.confirmation": "J'accorde  la licence ci-dessus",
 
+  //"submission.sections.ccLicense.info.title": "Help information",
+  "submission.sections.ccLicense.info.title": "Informations d'aide",
+  //"submission.sections.ccLicense.info.close": "Close",
+  "submission.sections.ccLicense.info.close": "Fermer",
+
   // "submission.sections.general.add-more": "Add more",
   "submission.sections.general.add-more": "Ajouter",
 
@@ -5766,8 +5876,8 @@
   // "thumbnail.person.placeholder": "No Profile Picture Available",
   "thumbnail.person.placeholder": "Aucune photo de profil disponible",
 
-  // "title": "DSpace",
-  "title": "DSpace",
+  // "title": "OSPR",
+  "title": "OSPR",
 
   // "vocabulary-treeview.header": "Hierarchical tree view",
   "vocabulary-treeview.header": "Arborescence hiérarchique",
