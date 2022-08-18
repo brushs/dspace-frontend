@@ -12,5 +12,4 @@ import { HeaderComponent as BaseComponent } from '../../../../app/header/header.
   //templateUrl: '../../../../app/header/header.component.html',
 })
 export class HeaderComponent extends BaseComponent {
-  
 }
