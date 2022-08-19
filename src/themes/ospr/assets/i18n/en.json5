@@ -4,12 +4,4 @@
 
   // DSpace default: "DSpace Angular :: "
   "repository.title.prefix": "DSpace :: ",
-
-  "item.edit.delete.virtual-metadata.open": "Open virtual metadata",
-
-  "submission.sections.ccLicense.info.title": "Help information",
-
-  "submission.sections.ccLicense.info.close": "Close",
-
-  "submission.sections.section.remove.title": "Remove section",
 }
