@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { MenuService as BaseComponentMenuService} from '../shared/menu/menu.service';
+import { Component, Optional } from '@angular/core';
 import { FooterComponent as BaseComponent } from '../../../../app/footer/footer.component';
+import { KlaroService as BaseComponentKlaroService } from '../../../../app/shared/cookies/klaro.service';
 
 @Component({
   selector: 'ds-footer',
@@ -12,11 +12,9 @@ import { FooterComponent as BaseComponent } from '../../../../app/footer/footer.
 export class FooterComponent extends BaseComponent {
   public locationPath: string;
 
-  constructor(
-    private menuService: BaseComponentMenuService
-  ) {
-      super(menuService);
-      this.getPath();
+  constructor(@Optional() private cookiesKlaro: BaseComponentKlaroService) {
+    super(cookiesKlaro);
+    this.getPath();
   }
 
   public getPath(): string {
