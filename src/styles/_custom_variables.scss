@@ -83,7 +83,8 @@
   --ds-breadcrumb-link-active-color: #{darken($cyan, 30%)};
   --ds-breadcrumb-max-length: 200px;
 
-  --ds-slider-color: #{$green};
+   /* OSPR specific change slider-color to blue instead of green*/
+  --ds-slider-color: #{$blue};
   --ds-slider-handle-width: 18px;
 
   --ds-search-form-scope-max-width: 150px;
