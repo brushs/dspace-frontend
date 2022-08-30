@@ -3002,14 +3002,14 @@
   // "item.page.abstract": "Abstract",
   "item.page.abstract": "Résumé",
 
-  // "item.page.author": "Authors",
-  "item.page.author": "Auteurs",
+  // "item.page.author": "Author(s)",
+  "item.page.author": "Auteur(s)",
 
-  // "item.page.citation": "Citation",
-  "item.page.citation": "Citation",
+  // "item.page.citation": "Citation(s)",
+  "item.page.citation": "Citation(s)",
 
-  // "item.page.collections": "Collections",
-  "item.page.collections": "Collections",
+  // "item.page.collections": "Collection(s)",
+  "item.page.collections": "Collection(s)",
 
   // "item.page.collections.loading": "Loading...",
   "item.page.collections.loading": "Chargement...",
@@ -3023,8 +3023,8 @@
   // "item.page.edit": "Edit this item",
   "item.page.edit": "Éditer cet Item",
 
-  // "item.page.files": "Files",
-  "item.page.files": "Fichiers",
+  // "item.page.files": "Download(s)",
+  "item.page.files": "Téléchargement(s)",
 
   // "item.page.filesection.description": "Description:",
   "item.page.filesection.description": "Description :",
@@ -3497,8 +3497,8 @@
   // "logout.title": "Logout",
   "logout.title": "Déconnexion",
 
-  // "menu.header.admin": "Management",
-  "menu.header.admin": "Administration",
+  // "menu.header.admin": "Content Management",
+  "menu.header.admin": "Gestion de contenu",
 
   // "menu.header.image.logo": "Government of Canada",
   "menu.header.image.logo":  "Gouvernement du Canada",

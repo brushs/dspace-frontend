@@ -2227,7 +2227,7 @@
 
   "item.page.edit": "Edit this item",
 
-  "item.page.files": "Files",
+  "item.page.files": "Download(s)",
 
   "item.page.filesection.description": "Description:",
 
@@ -2596,7 +2596,7 @@
 
 
 
-  "menu.header.admin": "Management",
+  "menu.header.admin": "Content Management",
 
   "menu.header.image.logo": "Government of Canada",
 
@@ -2912,7 +2912,8 @@
 
   "orgunit.page.titleprefix": "Organizational Unit: ",
 
-	"pagination.button.prev": "Previous",
+
+  "pagination.button.prev": "Previous",
 	"pagination.button.next": "Next",
 
   "pagination.options.description": "Pagination options",
