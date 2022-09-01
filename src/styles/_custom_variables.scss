@@ -30,7 +30,8 @@
   --ds-navbar-link-color: #{$blue};
   --ds-navbar-link-color-hover: #{darken($blue, 50%)};
 
-  $admin-sidebar-bg: darken(#2B4E72, 17%);
+  /* OSPR specific change footer bg change to "white" admin side bar */
+  $admin-sidebar-bg: $white;
   $admin-sidebar-active-bg: darken($admin-sidebar-bg, 2%);
   --ds-admin-sidebar-bg: #{$admin-sidebar-bg};
   --ds-admin-sidebar-active-bg: #{$admin-sidebar-active-bg};
