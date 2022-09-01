@@ -1,4 +1,4 @@
-<nav @slideHorizontal class="navbar navbar-dark p-0"
+<nav @slideHorizontal class="navbar navbar-light bg-light p-0"
      [ngClass]="{'active': sidebarOpen, 'inactive': sidebarClosed}"
      [@slideSidebar]="{
       value: (!(sidebarExpanded | async) ? 'collapsed' : 'expanded'),
@@ -14,7 +14,7 @@
               <div class="sidebar-section">
                 <div href="javascript:void(0);" class="nav-item d-flex flex-row flex-nowrap py-0">
                   <div class="shortcut-icon navbar-brand logo-wrapper">
-                    <img class="admin-logo" src="assets/images/dspace-logo-mini.svg"
+                    <img class="admin-logo" src="assets/images/flag.svg"
                          [alt]="('menu.header.image.logo') | translate">
                   </div>
                   <div class="sidebar-collapsible navbar-brand">
