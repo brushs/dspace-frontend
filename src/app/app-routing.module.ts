@@ -31,6 +31,7 @@ import { EndUserAgreementCurrentUserGuard } from './core/end-user-agreement/end-
 import { SiteRegisterGuard } from './core/data/feature-authorization/feature-authorization-guard/site-register.guard';
 import { ThemedPageNotFoundComponent } from './pagenotfound/themed-pagenotfound.component';
 import { ThemedForbiddenComponent } from './forbidden/themed-forbidden.component';
+import { SearchTipsPageComponent } from '../themes/ospr/app/search-tips-page/search-tips-page.component';
 import {
   GroupAdministratorGuard
 } from './core/data/feature-authorization/feature-authorization-guard/group-administrator.guard';
@@ -66,6 +67,7 @@ import { ThemedPageErrorComponent } from './page-error/themed-page-error.compone
             data: { showBreadcrumbs: false },
             canActivate: [EndUserAgreementCurrentUserGuard]
           },
+          { path: 'tips-for-searching', pathMatch: 'full', component: SearchTipsPageComponent },
           {
             path: 'community-list',
             loadChildren: () => import('./community-list-page/community-list-page.module')

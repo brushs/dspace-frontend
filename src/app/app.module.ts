@@ -32,6 +32,7 @@ import { LocaleInterceptor } from './core/locale/locale.interceptor';
 import { XsrfInterceptor } from './core/xsrf/xsrf.interceptor';
 import { LogInterceptor } from './core/log/log.interceptor';
 import { EagerThemesModule } from '../themes/eager-themes.module';
+import { SearchTipsPageComponent } from '../themes/ospr/app/search-tips-page/search-tips-page.component';
 
 import { APP_CONFIG, AppConfig } from '../config/app-config.interface';
 import { NgxMaskModule } from 'ngx-mask';
@@ -141,6 +142,7 @@ const PROVIDERS = [
 
 const DECLARATIONS = [
   AppComponent,
+  SearchTipsPageComponent
 ];
 
 const EXPORTS = [
