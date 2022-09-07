@@ -1815,7 +1815,8 @@
 
   "item.edit.bitstreams.bundle.load.more": "Load more",
 
-  "item.edit.bitstreams.bundle.name": "BUNDLE: {{ name }}",
+  // "item.edit.bitstreams.bundle.name": "BUNDLE: {{ name }}",
+  "item.edit.bitstreams.bundle.name": "BUNDLE: ",
   "item.edit.bitstreams.bundle.name.ORIGINAL": "ORIGINAL",
 	"item.edit.bitstreams.bundle.name.THUMBNAILS": "THUMBNAILS",
 	"item.edit.bitstreams.bundle.name.TEXT": "TEXT",
