@@ -87,6 +87,10 @@ export class SearchFormComponent implements OnInit {
    * Retrieve the scope object from the URL so we can show its name
    */
   ngOnInit(): void {
+    //Fix OSPR issue 264: keep the page in search result when changing language.
+    if(typeof this.query !== 'undefined' && isNotEmpty(this.query)){
+      this.submitSearch.emit({query: this.query});
+    }
     if (isNotEmpty(this.scope)) {
       this.dsoService.findById(this.scope).pipe(getFirstSucceededRemoteDataPayload())
         .subscribe((scope: DSpaceObject) => this.selectedScope.next(scope));

@@ -34,3 +34,13 @@
     box-shadow: var(--bs-input-btn-focus-box-shadow);
   }
 }
+
+// OSPR specific change for search filters
+div {
+  word-break: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+
+

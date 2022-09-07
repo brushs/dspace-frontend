@@ -13,7 +13,7 @@ import { getBitstreamDownloadRoute } from '../../../../app-routing-paths';
 
 @Component({
   selector: 'ds-item-edit-bitstream',
-  styleUrls: ['../item-bitstreams.component.scss'],
+  styleUrls: ['../item-bitstreams.component.scss', '../OSPR-item-bitstreams.component.scss'],
   templateUrl: './item-edit-bitstream.component.html',
 })
 /**
