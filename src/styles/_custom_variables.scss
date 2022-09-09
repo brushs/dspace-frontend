@@ -30,12 +30,13 @@
   --ds-navbar-link-color: #{$blue};
   --ds-navbar-link-color-hover: #{darken($blue, 50%)};
 
-  /* OSPR specific change footer bg change to "white" admin side bar */
+  /* OSPR specific bg change to "white" admin side bar */
   $admin-sidebar-bg: $white;
   $admin-sidebar-active-bg: darken($admin-sidebar-bg, 2%);
   --ds-admin-sidebar-bg: #{$admin-sidebar-bg};
   --ds-admin-sidebar-active-bg: #{$admin-sidebar-active-bg};
-  --ds-admin-sidebar-header-bg: #{darken($admin-sidebar-bg, 7%)};
+  /* OSPR specific bg change to "white" admin side bar header */
+  --ds-admin-sidebar-header-bg:  #E3F2FD;
 
   --ds-dark-scrollbar-bg: #{$admin-sidebar-active-bg};
   --ds-dark-scrollbar-alt-bg: #{lighten($admin-sidebar-active-bg, 2%)};
@@ -81,7 +82,7 @@
   --ds-home-news-background-color: #{$gray-200};
 
   /* OSPR specific change breadcrum bg to #E3F2FD */
-  --ds-breadcrumb-bg: #E3F2FD;
+  --ds-breadcrumb-bg: #{$gray-200} !important;
   /* OSPR specific change footer bg change to "blue" */
   --ds-breadcrumb-link-color: #{$blue};
   --ds-breadcrumb-link-active-color: #{darken($blue, 30%)};
