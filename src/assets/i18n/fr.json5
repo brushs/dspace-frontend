@@ -3004,8 +3004,8 @@
   // "item.page.publisher": "Publisher",
   "item.page.publisher": "Éditeur",
 
-  // "item.page.titleprefix": "Item: ",
-  "item.page.titleprefix": "Item : ",
+  // "item.page.titleprefix": "Title : ",
+  "item.page.titleprefix": "Titre : ",
 
   // "item.page.volume-title": "Volume Title",
   "item.page.volume-title": "Titre du volume",
