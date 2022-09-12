@@ -1,6 +1,8 @@
 <div class="container" *ngVar="(processRD$ | async)?.payload as process">
     <div class="d-flex">
-        <h2 class="flex-grow-1">{{'process.detail.title' | translate:{id: process?.processId, name: process?.scriptName} }}</h2>
+        <!-- OSPR Changes- modifying h2 to h1-->  
+        <h1 id="wb-cont" class="flex-grow-1">{{'process.detail.title' | translate:{id: process?.processId, name: process?.scriptName} }}</h1>
+        <!-- modified h2 to h1-->
         <div>
             <button class="btn btn-lg btn-success " routerLink="/processes/new" [queryParams]="{id: process?.processId}"><i class="fas fa-plus pr-2"></i>{{'process.detail.create' | translate}}</button>
         </div>
