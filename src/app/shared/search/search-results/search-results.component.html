@@ -1,5 +1,7 @@
 <div class="d-flex justify-content-between">
-<h2 *ngIf="!disableHeader">{{ (configuration ? configuration + '.search.results.head' : 'search.results.head') | translate }}</h2>
+<!-- OSPR Changes- modifying h2 to h1-->
+<h1 id="wb-cont" *ngIf="!disableHeader">{{ (configuration ? configuration + '.search.results.head' : 'search.results.head') | translate }}</h1>
+<!-- modified h2 to h1-->
 <ds-search-export-csv [searchConfig]="searchConfig"></ds-search-export-csv>
 </div>
 <div *ngIf="searchResults && searchResults?.hasSucceeded && !searchResults?.isLoading && searchResults?.payload?.page.length > 0" @fadeIn>
