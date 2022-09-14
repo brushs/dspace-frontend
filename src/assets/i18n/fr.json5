@@ -2313,7 +2313,12 @@
   //"home.search-form.placeholder": "Search the repository ...",
   "home.search-form.placeholder": "Rechercher dans le référentiel ...",
 
-
+  //"home.button.help": "Help",
+  "home.button.help": "Aide",
+  //"home.button.advanced-search": "Advanced search",
+  "home.button.advanced-search": "Recherche Avancée",
+  //"home.button.tips-for-searching": "Tips for searching",
+  "home.button.tips-for-searching": "Conseils de recherche",
 
   // "home.top-level-communities.help": "Select a community to browse its collections.",
   "home.top-level-communities.help": "Sélectionner une communauté pour parcourir les collections sous-jacentes.",
