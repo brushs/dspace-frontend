@@ -2,8 +2,9 @@
   <div class="epeople-registry row">
     <div class="col-12">
       <div class="d-flex justify-content-between border-bottom mb-3">
-        <h2 id="header" class="pb-2">{{labelPrefix + 'head' | translate}}</h2>
-
+        <!-- OSPR Changes- modifying h2 to h1-->
+        <h1 id="header" class="pb-2">{{labelPrefix + 'head' | translate}}</h1>
+        <!-- modified h2 to h1-->
         <div *ngIf="!isEPersonFormShown">
           <button class="mr-auto btn btn-success addEPerson-button"
                   (click)="isEPersonFormShown = true">
@@ -17,9 +18,10 @@
                        (cancelForm)="isEPersonFormShown = false"></ds-eperson-form>
 
       <div *ngIf="!isEPersonFormShown">
-        <h3 id="search" class="border-bottom pb-2">{{labelPrefix + 'search.head' | translate}}
-
-        </h3>
+        <!-- OSPR Changes-->
+        <h2 id="search" class="border-bottom pb-2">{{labelPrefix + 'search.head' | translate}}
+        </h2>
+        <!-- end of OSPR changes h3 to h2 -->  
         <form [formGroup]="searchForm" (ngSubmit)="search(searchForm.value)" class="d-flex justify-content-between">
           <div>
             <select name="scope" id="scope" formControlName="scope" class="form-control" aria-label="Search scope">
