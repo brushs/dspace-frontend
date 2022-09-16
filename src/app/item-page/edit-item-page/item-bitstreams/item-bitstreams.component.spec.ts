@@ -25,6 +25,9 @@ import { getMockRequestService } from '../../../shared/mocks/request.service.moc
 import { createSuccessfulRemoteDataObject, createSuccessfulRemoteDataObject$ } from '../../../shared/remote-data.utils';
 import { createPaginatedList } from '../../../shared/testing/utils.test';
 import { FieldChangeType } from '../../../core/data/object-updates/field-change-type.model';
+// OSPR fix begins here
+import { CUSTOM_ELEMENTS_SCHEMA, DebugElement } from '@angular/core';
+// OSPR fix ends here
 
 let comp: ItemBitstreamsComponent;
 let fixture: ComponentFixture<ItemBitstreamsComponent>;
@@ -149,6 +152,7 @@ describe('ItemBitstreamsComponent', () => {
       patch: observableOf(new RestResponse(true, 200, 'OK'))
     });
 
+    // OSPR fix begins here
     TestBed.configureTestingModule({
       imports: [TranslateModule.forRoot()],
       declarations: [ItemBitstreamsComponent, ObjectValuesPipe, VarDirective],
@@ -164,10 +168,9 @@ describe('ItemBitstreamsComponent', () => {
         { provide: SearchConfigurationService, useValue: searchConfig },
         { provide: BundleDataService, useValue: bundleService },
         ChangeDetectorRef
-      ], schemas: [
-        NO_ERRORS_SCHEMA
-      ]
+      ], schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
+    // OSPR fix ends here
   }));
 
   beforeEach(() => {
