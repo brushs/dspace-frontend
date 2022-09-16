@@ -22,14 +22,14 @@
             margin-left: calc(-1 * var(--ds-sidebar-items-width));
         }
         .navbar-link {
-          color:rgb(0, 0, 0);
+          color:rgb(255, 255, 255);
         }
         .navbar-nav {
             .admin-menu-header {
                 background-color: var(--ds-admin-sidebar-header-bg);
 
                 .sidebar-section {
-                  background-color: inherit;
+                  background-color: var(--ds-admin-sidebar-active-bg);
                 }
 
                 .logo-wrapper {
@@ -60,7 +60,7 @@
                     .nav-item {
                         padding-top: var(--bs-spacer);
                         padding-bottom: var(--bs-spacer);
-                        background-color: inherit;
+                        background-color: var(--ds-admin-sidebar-bg);
 
                       &:focus-visible {
                         // since links fill the whole sidebar, we _inset_ the outline
@@ -88,7 +88,7 @@
                     }
 
                     .shortcut-icon {
-                        background-color: inherit;
+                        background-color: var(--ds-admin-sidebar-bg);;
                         padding-left: var(--ds-icon-padding);
                         padding-right: var(--ds-icon-padding);
                         z-index: var(--ds-icon-z-index);
