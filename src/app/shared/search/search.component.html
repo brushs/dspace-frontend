@@ -2,6 +2,8 @@
     <div class="row">
         <div class="col-12">
             <ng-template *ngTemplateOutlet="searchForm"></ng-template>
+            <!--OSPR adding sorting options here-->
+            <ds-search-settings [currentSortOption]="currentSortOptions$ | async" [sortOptionsList]="sortOptionsList$ | async"></ds-search-settings>
         </div>
     </div>
 </div>
@@ -18,6 +20,8 @@
     <div class="row">
         <div class="col-12" *ngIf="!(isXsOrSm$ | async)">
             <ng-template *ngTemplateOutlet="searchForm"></ng-template>
+            <!--OSPR adding sorting options here-->
+            <ds-search-settings [currentSortOption]="currentSortOptions$ | async" [sortOptionsList]="sortOptionsList$ | async"></ds-search-settings>
             <ng-content select="[additionalSearchOptions]"></ng-content>
         </div>
         <div id="search-content" class="col-12">
