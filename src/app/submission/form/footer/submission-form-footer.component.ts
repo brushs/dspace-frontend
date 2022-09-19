@@ -67,7 +67,7 @@ export class SubmissionFormFooterComponent implements OnChanges {
   }
 
   /**
-   * Initialize all instance variables
+   * Initialize all instance variables, which is conditional on the submission not being empty
    */
   ngOnChanges(changes: SimpleChanges) {
     if (isNotEmpty(this.submissionId)) {
@@ -97,10 +97,17 @@ export class SubmissionFormFooterComponent implements OnChanges {
   }
 
   /**
-   * Dispatch a submission deposit action
+   * Dispatch a submission deposit action, which is conditional on the submission not being empty
    */
   public deposit(event) {
-    this.submissionService.dispatchDeposit(this.submissionId);
+    if (!isNotEmpty(this.submissionId)) {
+      this.submissionIsInvalid = this.submissionService.getSubmissionStatus(this.submissionId).pipe(
+        map((isValid: boolean) => isValid === false)
+      );
+    }
+    else {
+      this.submissionService.dispatchDeposit(this.submissionId);
+    }
   }
 
   /**
