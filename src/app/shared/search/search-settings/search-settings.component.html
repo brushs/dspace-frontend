@@ -1,5 +1,7 @@
 <ng-container>
-    <h3>{{ 'search.sidebar.settings.title' | translate}}</h3>
+    <!-- <h3>{{ 'search.sidebar.settings.title' | translate}}</h3> -->
+    <!--OSPR diving result order it into rows -->
+    <div class="row">
     <div class="result-order-settings">
     <ds-sidebar-dropdown *ngIf="sortOptionsList"
                          [id]="'search-sidebar-sort'"
@@ -13,4 +15,5 @@
     </ds-sidebar-dropdown>
     </div>
     <ds-page-size-selector></ds-page-size-selector>
+    </div>
 </ng-container>
