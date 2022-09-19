@@ -21,6 +21,10 @@ import { RequestService } from '../../../core/data/request.service';
 import { createSuccessfulRemoteDataObject, createSuccessfulRemoteDataObject$ } from '../../../shared/remote-data.utils';
 import { FieldUpdate } from '../../../core/data/object-updates/field-update.model';
 
+// OSPR fix begins here
+import { CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+// OSPR fix ends here
+
 const infoNotification: INotification = new Notification('id', NotificationType.Info, 'info');
 const warningNotification: INotification = new Notification('id', NotificationType.Warning, 'warning');
 const successNotification: INotification = new Notification('id', NotificationType.Success, 'success');
@@ -118,6 +122,7 @@ describe('CollectionSourceComponent', () => {
     });
     requestService = jasmine.createSpyObj('requestService', ['removeByHrefSubstring', 'setStaleByHrefSubstring']);
 
+    // OSPR fix begins here
     TestBed.configureTestingModule({
       imports: [TranslateModule.forRoot(), RouterTestingModule],
       declarations: [CollectionSourceComponent],
@@ -131,8 +136,9 @@ describe('CollectionSourceComponent', () => {
         { provide: CollectionDataService, useValue: collectionService },
         { provide: RequestService, useValue: requestService }
       ],
-      schemas: [NO_ERRORS_SCHEMA]
+      schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
+    // OSPR fix ends here
   }));
 
   beforeEach(() => {

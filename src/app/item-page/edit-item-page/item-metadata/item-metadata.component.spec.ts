@@ -25,6 +25,11 @@ import { DSOSuccessResponse } from '../../../core/cache/response.models';
 import { createPaginatedList } from '../../../shared/testing/utils.test';
 import { FieldChangeType } from '../../../core/data/object-updates/field-change-type.model';
 
+// OSPR fix begins here
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+// OSPR fix ends here
+
+
 let comp: any;
 let fixture: ComponentFixture<ItemMetadataComponent>;
 let de: DebugElement;
@@ -161,6 +166,7 @@ describe('ItemMetadataComponent', () => {
       );
       objectCacheService = jasmine.createSpyObj('objectCacheService', ['addPatch']);
 
+      // OSPR fix begins here
       TestBed.configureTestingModule({
         imports: [SharedModule, TranslateModule.forRoot()],
         declarations: [ItemMetadataComponent],
@@ -172,9 +178,7 @@ describe('ItemMetadataComponent', () => {
           { provide: NotificationsService, useValue: notificationsService },
           { provide: RegistryService, useValue: metadataFieldService },
           { provide: ObjectCacheService, useValue: objectCacheService },
-        ], schemas: [
-          NO_ERRORS_SCHEMA
-        ]
+        ], schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
       }).compileComponents();
     })
   );
