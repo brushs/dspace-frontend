@@ -1,17 +1,11 @@
 # This image will be published as dspace/dspace-angular
 # See https://github.com/DSpace/dspace-angular/tree/main/docker for usage details
 
-FROM node:14-alpine
-WORKDIR /app
-ADD . /app/
-EXPOSE 4000
+FROM ubuntu:18.04 as build
 
-# We run yarn install with an increased network timeout (5min) to avoid "ESOCKETTIMEDOUT" errors from hub.docker.com
-# See, for example https://github.com/yarnpkg/yarn/issues/5540
-RUN yarn install --network-timeout 300000
+ARG TEST_ARG=testArgument
+RUN echo "Test Arg: " || $TEST_ARG
+RUN echo "Test Arg Format B: " || %TEST_ARG%
+RUN echo "Test Arg Format C: " || $(TEST_ARG)
+RUN echo "Test Arg Format D: " || ${TEST_ARG}
 
-# On startup, run in DEVELOPMENT mode (this defaults to live reloading enabled, etc).
-# Listen / accept connections from all IP addresses.
-# NOTE: At this time it is only possible to run Docker container in Production mode
-# if you have a public IP. See https://github.com/DSpace/dspace-angular/issues/1485
-CMD yarn serve --host 0.0.0.0

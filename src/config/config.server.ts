@@ -8,11 +8,11 @@ import { Config } from './config.interface';
 import { DefaultAppConfig } from './default-app-config';
 import { ServerConfig } from './server-config.interface';
 import { mergeConfig } from './config.util';
-import { isNotEmpty } from '../app/shared/empty.util';
+import { isNotEmpty, isEmpty } from '../app/shared/empty.util';
 
 const CONFIG_PATH = join(process.cwd(), 'config');
 
-type Environment = 'production' | 'development' | 'test';
+type Environment = 'production' | 'development' | 'test' | 'sandbox' | 'apption';
 
 const DSPACE = (key: string): string => {
   return `DSPACE_${key}`;
@@ -42,6 +42,12 @@ const getEnvironment = (): Environment => {
       case 'test':
         environment = 'test';
         break;
+      case 'sandbox':
+        environment = 'sandbox';
+        break;
+      case 'apption':
+        environment = 'apption';
+        break;
       case 'dev':
       case 'development':
         environment = 'development';
@@ -54,7 +60,7 @@ const getEnvironment = (): Environment => {
   return environment;
 };
 
-const getLocalConfigPath = (env: Environment) => {
+const getLocalConfigPath = (env: string) => {
   // default to config/config.yml
   let localConfigPath = join(CONFIG_PATH, 'config.yml');
 
@@ -70,6 +76,12 @@ const getLocalConfigPath = (env: Environment) => {
       break;
     case 'test':
       envVariations = ['test'];
+      break;
+    case 'apption':
+      envVariations = ['apption'];
+      break;
+    case 'sandbox':
+      envVariations = ['sandbox'];
       break;
     case 'development':
     default:
@@ -156,12 +168,15 @@ const buildBaseUrl = (config: ServerConfig): void => {
  * @param destConfigPath optional path to save config file
  * @returns app config
  */
-export const buildAppConfig = (destConfigPath?: string): AppConfig => {
+export const buildAppConfig = (destConfigPath?: string, envToConfig?: string): AppConfig => {
   // start with default app config
   const appConfig: AppConfig = new DefaultAppConfig();
 
   // determine which dist app config by environment
-  const env = getEnvironment();
+  let env = envToConfig;
+  if (isEmpty(env)) {
+    env = getEnvironment();
+  }
 
   switch (env) {
     case 'production':
@@ -169,6 +184,12 @@ export const buildAppConfig = (destConfigPath?: string): AppConfig => {
       break;
     case 'test':
       console.log(`Building ${colors.blue.bold(`test`)} app config`);
+      break;
+    case 'sandbox':
+      console.log(`Building ${colors.blue.bold(`sandbox`)} app config`);
+      break;
+    case 'apption':
+      console.log(`Building ${colors.blue.bold(`apption`)} app config`);
       break;
     default:
       console.log(`Building ${colors.green.bold(`development`)} app config`);
