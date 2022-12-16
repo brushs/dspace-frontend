@@ -1461,7 +1461,7 @@
 
   "dso-selector.set-scope.community.head": "Select a search scope",
 
-  "dso-selector.set-scope.community.button": "Search all of OSPR",
+  "dso-selector.set-scope.community.button": "Search all of NRC OPR",
 
   "dso-selector.set-scope.community.input-header": "Search for a community or collection",
 
@@ -1557,7 +1557,7 @@
 
 	"footer.copyright": "Government of Canada © 2021",
 
-  "footer.link.dspace": "OSPR software",
+  "footer.link.dspace": "NRC OPR software",
 
   "footer.link.lyrasis": "LYRASIS",
 
@@ -2655,7 +2655,7 @@
 
   "login.form.forgot-password": "Have you forgotten your password?",
 
-  "login.form.header": "Please log in to OSPR",
+  "login.form.header": "Please log in to NRC OPR",
 
   "login.form.new-user": "New user? Click here to register.",
 
@@ -2677,7 +2677,7 @@
 
 
 
-  "logout.form.header": "Log out from OSPR",
+  "logout.form.header": "Log out from NRC OPR",
 
   "logout.form.submit": "Log out",
 
@@ -2868,7 +2868,7 @@
   "metadata-export-search.submit.error": "Starting the export has failed",
 
 
-  "mydspace.breadcrumbs": "MyOSPR",
+  "mydspace.breadcrumbs": "MyNRCOPR",
 
   "mydspace.description": "",
 
@@ -2924,7 +2924,7 @@
 
   "mydspace.results.no-uri": "No Uri",
 
-  "mydspace.search-form.placeholder": "Search in myOSPR...",
+  "mydspace.search-form.placeholder": "Search in myNRCOPR...",
 
   "mydspace.show.workflow": "Workflow tasks",
 
@@ -2940,7 +2940,7 @@
 
   "mydspace.status.workspace": "Workspace",
 
-  "mydspace.title": "MyOSPR",
+  "mydspace.title": "MyNRCOPR",
 
   "mydspace.upload.upload-failed": "Error creating new workspace. Please verify the content uploaded before retry.",
 
@@ -2968,7 +2968,7 @@
 
   "nav.main.description": "Main navigation bar",
 
-  "nav.mydspace": "MyOSPR",
+  "nav.mydspace": "MyNRCOPR",
 
   "nav.profile": "Profile",
 
@@ -3376,9 +3376,9 @@
 
   "repository.image.logo": "Repository logo",
 
-  "repository.title.prefix": "OSPR :: ",
+  "repository.title.prefix": "NRC OPR :: ",
 
-  "repository.title.prefixDSpace": "OSPR ::",
+  "repository.title.prefixDSpace": "NRC OPR ::",
 
 
   "resource-policies.add.button": "Add",
@@ -3711,7 +3711,7 @@
 
   "search.form.search_dspace": "All repository",
 
-  "search.form.scope.all": "All of OSPR",
+  "search.form.scope.all": "All of NRC OPR",
 
 
 
@@ -3855,7 +3855,7 @@
 
   "submission.import-external.page.hint": "Enter a query above to find items from the web to import in to OSPR.",
 
-  "submission.import-external.back-to-my-dspace": "Back to MyOSPR",
+  "submission.import-external.back-to-my-dspace": "Back to MyNRCOPR",
 
   "submission.import-external.search.placeholder": "Search the external source",
 
