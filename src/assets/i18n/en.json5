@@ -1788,13 +1788,13 @@
 
   "home.title": "Home",
 
-  "home.top-level-communities.head": "Communities in OSPR",
-	"home.top-home.head": "Open Science Publication Repository(OSPR)",
+  "home.top-level-communities.head": "Communities in NRC OPR",
+	"home.top-home.head": "NRCan Open Publication Repository",
 	"home.button.help": "Help",
 	"home.button.advanced-search": "Advanced search",
 	"home.button.tips-for-searching": "Tips for searching",
 	"home.learn.more": "Learn More",
-	"home.page.description": "The Open Science Publication Repository provides free and open access to science publication and research funded by the Canadian Government.",
+	"home.page.description": "The NRCan Open Publication Repository provides free and open access to science and research published by Natural Resources Canada.",
 	"home.page.search-tips-title": "Start your search:",
 	"home.page.search-tips": "Search examples: Title, Author, Title AND Author OR DOI number",
 
@@ -2715,7 +2715,7 @@
 
   "menu.section.browse_community_by_title": "By Title",
 
-  "menu.section.browse_global": "All of OSPR",
+  "menu.section.browse_global": "All of NRC OPR",
 
   "menu.section.browse_global_by_author": "By Author",
 
@@ -2956,7 +2956,7 @@
 
 
 
-  "nav.browse.header": "All of OSPR",
+  "nav.browse.header": "All of NRC OPR",
 
   "nav.community-browse.header": "By Community",
 
@@ -4538,7 +4538,7 @@
 
 
 
-  "title": "OSPR",
+  "title": "NRC OPR",
 
 
 
