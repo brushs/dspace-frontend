@@ -33,6 +33,7 @@ L.Marker.prototype.options.icon = markerIcon;
 export class GeoSearchPageComponent implements OnInit {
 
   name = 'Dspace';
+  home  = 'Home';
   map: any;
   lat: number = 45.4215;
   lon: number = -75.6972;
@@ -115,6 +116,44 @@ export class GeoSearchPageComponent implements OnInit {
     var drawControl = new L.Control.Draw(options);
     this.map.addControl(drawControl);    
 
+    var app = this;
+    this.map.on(L.Draw.Event.CREATED, function (e) {
+      var type = e.layerType,
+        layer = e.layer;
+
+      if (type === 'marker') {
+        layer.bindPopup('A popup!');
+        console.log(layer.getLatLng());
+      } else if (type == 'rectangle') {
+        var latLng = layer.getLatLngs()[0];
+        //this.data = latLng.lat;
+        //console.log(layer.getLatLngs());
+        //console.log('should be rect:' + type);
+        app.updateData(latLng);
+      } else {
+        console.log('type, lan/long:' + type + ',' + layer.getLatLngs());
+      }
+      app.drawnItems.addLayer(layer);
+      console.log("draw");
+    });
   }
 
+  private updateData(value: any) {
+    if (value instanceof Array) {
+      var lb = value[0];
+      var tr = value[2];
+      //console.log(lb, tr);
+    }
+    //this.data = lb + ' to: ' + tr;
+    this.lat1 = lb.lat.toFixed(5);
+    this.lng1 = lb.lng.toFixed(5);
+    this.lat2 = tr.lat.toFixed(5);
+    this.lng2 = tr.lng.toFixed(5);
+  }
+
+  onShow() {
+    console.log("test clicked");
+  }
 }
+
+
