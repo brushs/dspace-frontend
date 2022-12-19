@@ -1461,7 +1461,7 @@
 
   "dso-selector.set-scope.community.head": "Select a search scope",
 
-  "dso-selector.set-scope.community.button": "Search all of NRC OPR",
+  "dso-selector.set-scope.community.button": "Search all of NRCan OPR",
 
   "dso-selector.set-scope.community.input-header": "Search for a community or collection",
 
@@ -1557,7 +1557,7 @@
 
 	"footer.copyright": "Government of Canada © 2021",
 
-  "footer.link.dspace": "NRC OPR software",
+  "footer.link.dspace": "NRCan OPR software",
 
   "footer.link.lyrasis": "LYRASIS",
 
@@ -1788,7 +1788,7 @@
 
   "home.title": "Home",
 
-  "home.top-level-communities.head": "Communities in NRC OPR",
+  "home.top-level-communities.head": "Communities in NRCan OPR",
 	"home.top-home.head": "NRCan Open Publication Repository",
 	"home.button.help": "Help",
 	"home.button.advanced-search": "Advanced search",
@@ -2655,7 +2655,7 @@
 
   "login.form.forgot-password": "Have you forgotten your password?",
 
-  "login.form.header": "Please log in to NRC OPR",
+  "login.form.header": "Please log in to NRCan OPR",
 
   "login.form.new-user": "New user? Click here to register.",
 
@@ -2677,7 +2677,7 @@
 
 
 
-  "logout.form.header": "Log out from NRC OPR",
+  "logout.form.header": "Log out from NRCan OPR",
 
   "logout.form.submit": "Log out",
 
@@ -2868,7 +2868,7 @@
   "metadata-export-search.submit.error": "Starting the export has failed",
 
 
-  "mydspace.breadcrumbs": "MyNRCOPR",
+  "mydspace.breadcrumbs": "MyNRCanOPR",
 
   "mydspace.description": "",
 
@@ -2924,7 +2924,7 @@
 
   "mydspace.results.no-uri": "No Uri",
 
-  "mydspace.search-form.placeholder": "Search in myNRCOPR...",
+  "mydspace.search-form.placeholder": "Search in myNRCanOPR...",
 
   "mydspace.show.workflow": "Workflow tasks",
 
@@ -2940,7 +2940,7 @@
 
   "mydspace.status.workspace": "Workspace",
 
-  "mydspace.title": "MyNRCOPR",
+  "mydspace.title": "MyNRCanOPR",
 
   "mydspace.upload.upload-failed": "Error creating new workspace. Please verify the content uploaded before retry.",
 
@@ -2956,7 +2956,7 @@
 
 
 
-  "nav.browse.header": "All of NRC OPR",
+  "nav.browse.header": "All of NRCan OPR",
 
   "nav.community-browse.header": "By Community",
 
@@ -2968,7 +2968,7 @@
 
   "nav.main.description": "Main navigation bar",
 
-  "nav.mydspace": "MyNRCOPR",
+  "nav.mydspace": "MyNRCanOPR",
 
   "nav.profile": "Profile",
 
@@ -3376,9 +3376,9 @@
 
   "repository.image.logo": "Repository logo",
 
-  "repository.title.prefix": "NRC OPR :: ",
+  "repository.title.prefix": "NRCan OPR :: ",
 
-  "repository.title.prefixDSpace": "NRC OPR ::",
+  "repository.title.prefixDSpace": "NRCan OPR ::",
 
 
   "resource-policies.add.button": "Add",
@@ -3711,7 +3711,7 @@
 
   "search.form.search_dspace": "All repository",
 
-  "search.form.scope.all": "All of NRC OPR",
+  "search.form.scope.all": "All of NRCan OPR",
 
 
 
@@ -3855,7 +3855,7 @@
 
   "submission.import-external.page.hint": "Enter a query above to find items from the web to import in to OSPR.",
 
-  "submission.import-external.back-to-my-dspace": "Back to MyNRCOPR",
+  "submission.import-external.back-to-my-dspace": "Back to MyNRCanOPR",
 
   "submission.import-external.search.placeholder": "Search the external source",
 
@@ -4538,7 +4538,7 @@
 
 
 
-  "title": "NRC OPR",
+  "title": "NRCan OPR",
 
 
 
