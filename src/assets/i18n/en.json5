@@ -3255,6 +3255,11 @@
   "publication.search.title": "Publication Search",
 
 
+  "publisher.listelement.badge": "Publisher",
+
+  "publication-relationships.search.results.head": "Publisher Search Results",
+
+
   "media-viewer.next": "Next",
 
   "media-viewer.previous": "Previous",
@@ -4064,6 +4069,8 @@
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.orcid": "ORCID ({{ count }})",
 
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isPublisherOfPublication": "Publishers ({{ count }})",
+
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.lcname": "LC Names ({{ count }})",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.pubmed": "PubMed ({{ count }})",
@@ -4108,6 +4115,8 @@
   "submission.sections.describe.relationship-lookup.title.isAuthorOfPublication": "Authors",
 
   "submission.sections.describe.relationship-lookup.title.isFundingAgencyOfPublication": "Funding Agency",
+  "submission.sections.describe.relationship-lookup.title.isPublisherOfPublication": "Publisher",
+  
   "submission.sections.describe.relationship-lookup.title.Project": "Projects",
 
   "submission.sections.describe.relationship-lookup.title.Publication": "Publications",
@@ -4155,6 +4164,8 @@
   "submission.sections.describe.relationship-lookup.selection-tab.title.JournalVolume": "Selected Journal Volume",
 
   "submission.sections.describe.relationship-lookup.selection-tab.title.isFundingAgencyOfPublication": "Selected Funding Agency",
+
+  "submission.sections.describe.relationship-lookup.selection-tab.title.isPublisherOfPublication": "Selected Publishers",
 
   "submission.sections.describe.relationship-lookup.selection-tab.title.isFundingOfPublication": "Selected Funding",
   "submission.sections.describe.relationship-lookup.selection-tab.title.JournalIssue": "Selected Issue",
