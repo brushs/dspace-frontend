@@ -3255,9 +3255,23 @@
   "publication.search.title": "Publication Search",
 
 
+  "publication-relationships.search.results.head": "Publisher Search Results",
+
   "publisher.listelement.badge": "Publisher",
 
-  "publication-relationships.search.results.head": "Publisher Search Results",
+  "area.listelement.badge": "Area",
+
+  "division.listelement.badge": "Division",
+
+  "language.listelement.badge": "Language",
+
+  "serial.listelement.badge": "Serial",
+
+  "country.listelement.badge": "Country",
+
+  "province.listelement.badge": "Province",
+
+  "sponsor.listelement.badge": "Sponsor",
 
 
   "media-viewer.next": "Next",
