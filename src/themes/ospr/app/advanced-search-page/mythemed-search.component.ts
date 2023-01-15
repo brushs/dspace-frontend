@@ -63,17 +63,4 @@ export class MyThemedSearchComponent extends SearchComponent {
 
   @Output() selectObject: EventEmitter<ListableObject> = new EventEmitter<ListableObject>();
 
-  protected getComponentName(): string {
-    return 'SearchComponent';
-  }
-
-  protected importThemedComponent(themeName: string): Promise<any> {
-    //return import(`../../../themes/${themeName}/app/shared/search/search.component`);
-    return import(`../../../../themes/${themeName}/app/shared/search/search.component`);
-  }
-
-  protected importUnthemedComponent(): Promise<any> {
-    //return import('./search.component');
-    return import('../../../../app/shared/search/search.component');
-  }
 }
