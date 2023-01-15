@@ -16,9 +16,9 @@ import { ListableObject } from '../../../../app/shared/object-collection/shared/
 @Component({
   selector: 'ds-mythemed-search',
   styleUrls: [],
-  templateUrl: '../../../../app/shared/theme-support/themed.component.html',
+  templateUrl: '../../../../app/shared/search/search.component.html',
 })
-export class MyThemedSearchComponent extends ThemedComponent<SearchComponent> {
+export class MyThemedSearchComponent extends SearchComponent {
   protected inAndOutputNames: (keyof SearchComponent & keyof this)[] = ['configurationList', 'context', 'configuration', 'fixedFilterQuery', 'useCachedVersionIfAvailable', 'inPlaceSearch', 'linkType', 'paginationId', 'searchEnabled', 'sideBarWidth', 'searchFormPlaceholder', 'selectable', 'selectionConfig', 'showSidebar', 'showViewModes', 'useUniquePageId', 'viewModeList', 'showScopeSelector', 'resultFound', 'deselectObject', 'selectObject'];
 
   @Input() configurationList: SearchConfigurationOption[] = [];
