@@ -71,7 +71,11 @@ import { ThemedPageErrorComponent } from './page-error/themed-page-error.compone
           },
           { path: 'tips-for-searching', pathMatch: 'full', component: SearchTipsPageComponent },
           { path: 'geo-search', pathMatch: 'full', component: GeoSearchPageComponent },
-          { path: 'advanced-search', pathMatch: 'full', component: AdvancedSearchPageComponent },
+          { path: 'advanced-search',
+            //loadChildren: () => import('../themes/ospr/app/advanced-search-page/advanced-search-page.module')
+            //  .then((m) => m.AdvancedSearchPageModule)
+            pathMatch: 'full', component: AdvancedSearchPageComponent
+          },
           {
             path: 'community-list',
             loadChildren: () => import('./community-list-page/community-list-page.module')
