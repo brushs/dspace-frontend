@@ -14,6 +14,7 @@ import { SearchModule } from '../../../../app/shared/search/search.module';
 import { AdvancedSearchPageComponent } from './advanced-search-page.component';
 import { MyThemedSearchComponent } from './mythemed-search.component';
 import { MySearchComponent } from './my-search-component/my-search.component';
+import { GeoSearchPageComponent } from '../geo-search-page/geo-search-page.component';
 
 const components = [
   //SearchPageComponent,
@@ -21,7 +22,8 @@ const components = [
   //ThemedSearchPageComponent
   AdvancedSearchPageComponent,
   MyThemedSearchComponent,
-  MySearchComponent
+  MySearchComponent,
+  GeoSearchPageComponent
 ];
 
 @NgModule({
