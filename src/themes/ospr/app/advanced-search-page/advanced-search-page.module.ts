@@ -13,13 +13,15 @@ import { SearchConfigurationService } from '../../../../app/core/shared/search/s
 import { SearchModule } from '../../../../app/shared/search/search.module';
 import { AdvancedSearchPageComponent } from './advanced-search-page.component';
 import { MyThemedSearchComponent } from './mythemed-search.component';
+import { MySearchComponent } from './my-search-component/my-search.component';
 
 const components = [
   //SearchPageComponent,
   //SearchTrackerComponent,
   //ThemedSearchPageComponent
   AdvancedSearchPageComponent,
-  MyThemedSearchComponent
+  MyThemedSearchComponent,
+  MySearchComponent
 ];
 
 @NgModule({

@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ThemedComponent } from '../../../../app/shared/theme-support/themed.component';
 import { SearchComponent } from '../../../../app/shared/search/search.component';
+import { MySearchComponent } from './my-search-component/my-search.component';
 import { SearchConfigurationOption } from '../../../../app/shared/search/search-switch-configuration/search-configuration-option.model';
 import { Context } from '../../../../app/core/shared/context.model';
 import { CollectionElementLinkType } from '../../../../app/shared/object-collection/collection-element-link.type';
@@ -16,10 +17,11 @@ import { ListableObject } from '../../../../app/shared/object-collection/shared/
 @Component({
   selector: 'ds-mythemed-search',
   styleUrls: [],
-  templateUrl: '../../../../app/shared/search/search.component.html',
+  //templateUrl: '../../../../app/shared/search/search.component.html',
+  templateUrl: './my-search-component/my-search.component.html',
 })
-export class MyThemedSearchComponent extends SearchComponent {
-  protected inAndOutputNames: (keyof SearchComponent & keyof this)[] = ['configurationList', 'context', 'configuration', 'fixedFilterQuery', 'useCachedVersionIfAvailable', 'inPlaceSearch', 'linkType', 'paginationId', 'searchEnabled', 'sideBarWidth', 'searchFormPlaceholder', 'selectable', 'selectionConfig', 'showSidebar', 'showViewModes', 'useUniquePageId', 'viewModeList', 'showScopeSelector', 'resultFound', 'deselectObject', 'selectObject'];
+export class MyThemedSearchComponent extends MySearchComponent {
+  protected inAndOutputNames: (keyof MySearchComponent & keyof this)[] = ['configurationList', 'context', 'configuration', 'fixedFilterQuery', 'useCachedVersionIfAvailable', 'inPlaceSearch', 'linkType', 'paginationId', 'searchEnabled', 'sideBarWidth', 'searchFormPlaceholder', 'selectable', 'selectionConfig', 'showSidebar', 'showViewModes', 'useUniquePageId', 'viewModeList', 'showScopeSelector', 'resultFound', 'deselectObject', 'selectObject'];
 
   @Input() configurationList: SearchConfigurationOption[] = [];
 
