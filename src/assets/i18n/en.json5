@@ -4310,6 +4310,18 @@
 
   "submission.sections.submit.progressbar.detect-duplicate": "Potential duplicates",
 
+  "submission.sections.submit.progressbar.bibliographic": "Bibliographic",
+
+  "submission.sections.submit.progressbar.geographic": "Geographic",
+
+  "submission.sections.submit.progressbar.reference": "Reference",
+
+  "submission.sections.submit.progressbar.content": "Content",
+
+  "submission.sections.submit.progressbar.nrcan": "NRCan",
+
+  "submission.sections.submit.progressbar.describe": "Description",
+
   "submission.sections.submit.progressbar.license": "Deposit license",
 
   "submission.sections.submit.progressbar.sherpapolicy": "Sherpa policies",
