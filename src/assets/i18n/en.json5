@@ -1461,7 +1461,7 @@
 
   "dso-selector.set-scope.community.head": "Select a search scope",
 
-  "dso-selector.set-scope.community.button": "Search all of NRCan OPR",
+  "dso-selector.set-scope.community.button": "Search all of NRCan OSTR",
 
   "dso-selector.set-scope.community.input-header": "Search for a community or collection",
 
@@ -1557,7 +1557,7 @@
 
 	"footer.copyright": "Government of Canada © 2021",
 
-  "footer.link.dspace": "NRCan OPR software",
+  "footer.link.dspace": "NRCan OSTR software",
 
   "footer.link.lyrasis": "LYRASIS",
 
@@ -1788,13 +1788,13 @@
 
   "home.title": "Home",
 
-  "home.top-level-communities.head": "Communities in NRCan OPR",
-	"home.top-home.head": "NRCan Open Publication Repository",
+  "home.top-level-communities.head": "Communities in NRCan OSTR",
+	"home.top-home.head": "NRCan Open S&T Repository",
 	"home.button.help": "Help",
 	"home.button.advanced-search": "Advanced search",
 	"home.button.tips-for-searching": "Tips for searching",
 	"home.learn.more": "Learn More",
-	"home.page.description": "The NRCan Open Publication Repository provides free and open access to science and research published by Natural Resources Canada.",
+	"home.page.description": "The NRCan Open S&T Repository provides free and open access to publications, science and research published by Natural Resources Canada.",
 	"home.page.search-tips-title": "Start your search:",
 	"home.page.search-tips": "Search examples: Title, Author, Title AND Author OR DOI number",
 
@@ -2655,7 +2655,7 @@
 
   "login.form.forgot-password": "Have you forgotten your password?",
 
-  "login.form.header": "Please log in to NRCan OPR",
+  "login.form.header": "Please log in to NRCan OSTR",
 
   "login.form.new-user": "New user? Click here to register.",
 
@@ -2677,7 +2677,7 @@
 
 
 
-  "logout.form.header": "Log out from NRCan OPR",
+  "logout.form.header": "Log out from NRCan OSTR",
 
   "logout.form.submit": "Log out",
 
@@ -2715,7 +2715,7 @@
 
   "menu.section.browse_community_by_title": "By Title",
 
-  "menu.section.browse_global": "All of NRC OPR",
+  "menu.section.browse_global": "All of NRC OSTR",
 
   "menu.section.browse_global_by_author": "By Author",
 
@@ -2956,7 +2956,7 @@
 
 
 
-  "nav.browse.header": "All of NRCan OPR",
+  "nav.browse.header": "All of NRCan OSTR",
 
   "nav.community-browse.header": "By Community",
 
@@ -3411,9 +3411,9 @@
 
   "repository.image.logo": "Repository logo",
 
-  "repository.title.prefix": "NRCan OPR :: ",
+  "repository.title.prefix": "NRCan OSTR :: ",
 
-  "repository.title.prefixDSpace": "NRCan OPR ::",
+  "repository.title.prefixDSpace": "NRCan OSTR ::",
 
 
   "resource-policies.add.button": "Add",
@@ -3746,7 +3746,7 @@
 
   "search.form.search_dspace": "All repository",
 
-  "search.form.scope.all": "All of NRCan OPR",
+  "search.form.scope.all": "All of NRCan OSTR",
 
 
 
@@ -4591,7 +4591,7 @@
 
 
 
-  "title": "NRCan OPR",
+  "title": "NRCan OSTR",
 
 
 
