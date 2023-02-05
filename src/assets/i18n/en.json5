@@ -1461,7 +1461,7 @@
 
   "dso-selector.set-scope.community.head": "Select a search scope",
 
-  "dso-selector.set-scope.community.button": "Search all of OSPR",
+  "dso-selector.set-scope.community.button": "Search all of NRCan OSTR",
 
   "dso-selector.set-scope.community.input-header": "Search for a community or collection",
 
@@ -1557,7 +1557,7 @@
 
 	"footer.copyright": "Government of Canada © 2021",
 
-  "footer.link.dspace": "OSPR software",
+  "footer.link.dspace": "NRCan OSTR software",
 
   "footer.link.lyrasis": "LYRASIS",
 
@@ -1788,13 +1788,13 @@
 
   "home.title": "Home",
 
-  "home.top-level-communities.head": "Communities in OSPR",
-	"home.top-home.head": "Open Science Publication Repository(OSPR)",
+  "home.top-level-communities.head": "Communities in NRCan OSTR",
+	"home.top-home.head": "NRCan Open S&T Repository",
 	"home.button.help": "Help",
 	"home.button.advanced-search": "Advanced search",
 	"home.button.tips-for-searching": "Tips for searching",
 	"home.learn.more": "Learn More",
-	"home.page.description": "The Open Science Publication Repository provides free and open access to science publication and research funded by the Canadian Government.",
+	"home.page.description": "The NRCan Open S&T Repository provides free and open access to publications, science and research published by Natural Resources Canada.",
 	"home.page.search-tips-title": "Start your search:",
 	"home.page.search-tips": "Search examples: Title, Author, Title AND Author OR DOI number",
 
@@ -2655,7 +2655,7 @@
 
   "login.form.forgot-password": "Have you forgotten your password?",
 
-  "login.form.header": "Please log in to OSPR",
+  "login.form.header": "Please log in to NRCan OSTR",
 
   "login.form.new-user": "New user? Click here to register.",
 
@@ -2677,7 +2677,7 @@
 
 
 
-  "logout.form.header": "Log out from OSPR",
+  "logout.form.header": "Log out from NRCan OSTR",
 
   "logout.form.submit": "Log out",
 
@@ -2715,7 +2715,7 @@
 
   "menu.section.browse_community_by_title": "By Title",
 
-  "menu.section.browse_global": "All of OSPR",
+  "menu.section.browse_global": "All of NRC OSTR",
 
   "menu.section.browse_global_by_author": "By Author",
 
@@ -2868,7 +2868,7 @@
   "metadata-export-search.submit.error": "Starting the export has failed",
 
 
-  "mydspace.breadcrumbs": "MyOSPR",
+  "mydspace.breadcrumbs": "MyNRCanOPR",
 
   "mydspace.description": "",
 
@@ -2924,7 +2924,7 @@
 
   "mydspace.results.no-uri": "No Uri",
 
-  "mydspace.search-form.placeholder": "Search in myOSPR...",
+  "mydspace.search-form.placeholder": "Search in myNRCanOPR...",
 
   "mydspace.show.workflow": "Workflow tasks",
 
@@ -2940,7 +2940,7 @@
 
   "mydspace.status.workspace": "Workspace",
 
-  "mydspace.title": "MyOSPR",
+  "mydspace.title": "MyNRCanOPR",
 
   "mydspace.upload.upload-failed": "Error creating new workspace. Please verify the content uploaded before retry.",
 
@@ -2956,7 +2956,7 @@
 
 
 
-  "nav.browse.header": "All of OSPR",
+  "nav.browse.header": "All of NRCan OSTR",
 
   "nav.community-browse.header": "By Community",
 
@@ -2968,7 +2968,7 @@
 
   "nav.main.description": "Main navigation bar",
 
-  "nav.mydspace": "MyOSPR",
+  "nav.mydspace": "MyNRCanOPR",
 
   "nav.profile": "Profile",
 
@@ -3255,6 +3255,41 @@
   "publication.search.title": "Publication Search",
 
 
+  "publisher.search.results.head": "Publisher Search Results",
+
+  "area.search.results.head": "Area Search Results",
+
+  "division.search.results.head": "Division Search Results",
+
+  "language.search.results.head": "Language Search Results",
+  
+  "serial.search.results.head": "Serial Search Results",
+  
+  "sponsor.search.results.head": "Sponsor Search Results",
+  
+  "province.search.results.head": "Province Search Results",
+  
+  "country.search.results.head": "Country Search Results",
+  
+
+  
+  "publisher.listelement.badge": "Publisher",
+
+  "area.listelement.badge": "Area",
+
+  "division.listelement.badge": "Division",
+
+  "language.listelement.badge": "Language",
+
+  "serial.listelement.badge": "Serial",
+
+  "country.listelement.badge": "Country",
+
+  "province.listelement.badge": "Province",
+
+  "sponsor.listelement.badge": "Sponsor",
+
+
   "media-viewer.next": "Next",
 
   "media-viewer.previous": "Previous",
@@ -3376,9 +3411,9 @@
 
   "repository.image.logo": "Repository logo",
 
-  "repository.title.prefix": "OSPR :: ",
+  "repository.title.prefix": "NRCan OSTR :: ",
 
-  "repository.title.prefixDSpace": "OSPR ::",
+  "repository.title.prefixDSpace": "NRCan OSTR ::",
 
 
   "resource-policies.add.button": "Add",
@@ -3711,7 +3746,7 @@
 
   "search.form.search_dspace": "All repository",
 
-  "search.form.scope.all": "All of OSPR",
+  "search.form.scope.all": "All of NRCan OSTR",
 
 
 
@@ -3855,7 +3890,7 @@
 
   "submission.import-external.page.hint": "Enter a query above to find items from the web to import in to OSPR.",
 
-  "submission.import-external.back-to-my-dspace": "Back to MyOSPR",
+  "submission.import-external.back-to-my-dspace": "Back to MyNRCanOPR",
 
   "submission.import-external.search.placeholder": "Search the external source",
 
@@ -4064,6 +4099,8 @@
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.orcid": "ORCID ({{ count }})",
 
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isPublisherOfPublication": "Publishers ({{ count }})",
+
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.lcname": "LC Names ({{ count }})",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.pubmed": "PubMed ({{ count }})",
@@ -4108,6 +4145,8 @@
   "submission.sections.describe.relationship-lookup.title.isAuthorOfPublication": "Authors",
 
   "submission.sections.describe.relationship-lookup.title.isFundingAgencyOfPublication": "Funding Agency",
+  "submission.sections.describe.relationship-lookup.title.isPublisherOfPublication": "Publisher",
+  
   "submission.sections.describe.relationship-lookup.title.Project": "Projects",
 
   "submission.sections.describe.relationship-lookup.title.Publication": "Publications",
@@ -4155,6 +4194,8 @@
   "submission.sections.describe.relationship-lookup.selection-tab.title.JournalVolume": "Selected Journal Volume",
 
   "submission.sections.describe.relationship-lookup.selection-tab.title.isFundingAgencyOfPublication": "Selected Funding Agency",
+
+  "submission.sections.describe.relationship-lookup.selection-tab.title.isPublisherOfPublication": "Selected Publishers",
 
   "submission.sections.describe.relationship-lookup.selection-tab.title.isFundingOfPublication": "Selected Funding",
   "submission.sections.describe.relationship-lookup.selection-tab.title.JournalIssue": "Selected Issue",
@@ -4268,6 +4309,18 @@
   "submission.sections.submit.progressbar.describe.steptwo": "Describe",
 
   "submission.sections.submit.progressbar.detect-duplicate": "Potential duplicates",
+
+  "submission.sections.submit.progressbar.bibliographic": "Bibliographic",
+
+  "submission.sections.submit.progressbar.geographic": "Geographic",
+
+  "submission.sections.submit.progressbar.reference": "Reference",
+
+  "submission.sections.submit.progressbar.content": "Content",
+
+  "submission.sections.submit.progressbar.nrcan": "NRCan",
+
+  "submission.sections.submit.progressbar.describe": "Description",
 
   "submission.sections.submit.progressbar.license": "Deposit license",
 
@@ -4538,7 +4591,7 @@
 
 
 
-  "title": "OSPR",
+  "title": "NRCan OSTR",
 
 
 
