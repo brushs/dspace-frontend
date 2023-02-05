@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import 'leaflet-geosearch/dist/geosearch.css';
 //declare const L: any; // --> Works
@@ -51,6 +51,7 @@ export class GeoSearchPageComponent implements OnInit {
   lng1: any;
   lat2: any;
   lng2: any;
+  @Input() geodata: any;
 
 
   constructor() { }
@@ -149,10 +150,15 @@ export class GeoSearchPageComponent implements OnInit {
     this.lng1 = lb.lng.toFixed(5);
     this.lat2 = tr.lat.toFixed(5);
     this.lng2 = tr.lng.toFixed(5);
+    this.geodata = this.lat1 + ',' + this.lng1 + ',' + this.lat2 + ',' + this.lng2;
   }
 
   onShow() {
     console.log("test clicked");
+  }
+
+  getGeoData() {
+    return this.geodata;
   }
 }
 
