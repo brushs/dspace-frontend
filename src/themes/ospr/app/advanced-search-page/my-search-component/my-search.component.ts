@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Inject, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Inject, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { BehaviorSubject, combineLatest, Observable, Subscription } from 'rxjs';
@@ -33,6 +33,7 @@ import { SelectionConfig } from '../../../../../app/shared/search/search-results
 import { ListableObject } from '../../../../../app/shared/object-collection/shared/listable-object.model';
 import { CollectionElementLinkType } from '../../../../../app/shared/object-collection/collection-element-link.type';
 import { environment } from 'src/environments/environment';
+import { GeoSearchPageComponent } from '../../geo-search-page/geo-search-page.component';
 
 @Component({
   selector: 'ds-search',
@@ -201,6 +202,9 @@ export class MySearchComponent implements OnInit {
    */
   sub: Subscription;
 
+  //gdata: any;
+  @ViewChild(GeoSearchPageComponent) geoComponent: GeoSearchPageComponent;
+
   /**
    * Emits an event with the current search result entries
    */
@@ -294,6 +298,13 @@ export class MySearchComponent implements OnInit {
         this.searchOptions$.next(newSearchOptions);
         this.initialized$.next(true);
         // retrieve results
+        console.log('retrieveSearchResults');
+        var geodata = this.geoComponent.getGeoData();
+        var [lat1,lng1,lat2,lng2] = geodata.split(',');
+        var newquery = 'nrcan.geospatial.bbox:%5B' + lat1 +','+ lng1 + ' TO '+ lat2+ ','+ lng2 + '%5D';
+        console.log("###" + geodata);
+        //newSearchOptions['geoData'] = geodata;
+        //newSearchOptions['query'] = newquery;
         this.retrieveSearchResults(newSearchOptions);
       }
     });
