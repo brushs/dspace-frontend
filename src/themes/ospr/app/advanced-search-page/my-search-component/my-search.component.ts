@@ -34,6 +34,7 @@ import { ListableObject } from '../../../../../app/shared/object-collection/shar
 import { CollectionElementLinkType } from '../../../../../app/shared/object-collection/collection-element-link.type';
 import { environment } from 'src/environments/environment';
 import { GeoSearchPageComponent } from '../../geo-search-page/geo-search-page.component';
+import { DepartmentComponent } from '../department-component/department.component';
 
 @Component({
   selector: 'ds-search',
@@ -301,10 +302,11 @@ export class MySearchComponent implements OnInit {
         console.log('retrieveSearchResults');
         var geodata = this.geoComponent.getGeoData();
         var [lat1,lng1,lat2,lng2] = geodata.split(',');
-        var newquery = 'nrcan.geospatial.bbox:%5B' + lat1 +','+ lng1 + ' TO '+ lat2+ ','+ lng2 + '%5D';
+        var geoquery = 'nrcan.geospatial.bbox:[' + lat1 +','+ lng1 + ' TO '+ lat2+ ','+ lng2 + ']';
         console.log("###" + geodata);
-        //newSearchOptions['geoData'] = geodata;
+        newSearchOptions['geoquery'] = geoquery;
         //newSearchOptions['query'] = newquery;
+        //newSearchOptions['query'] = newquery + ' +' + newSearchOptions['query'];
         this.retrieveSearchResults(newSearchOptions);
       }
     });
@@ -363,8 +365,11 @@ export class MySearchComponent implements OnInit {
    */
   private retrieveSearchResults(searchOptions: PaginatedSearchOptions) {
     this.resultsRD$.next(null);
+    var cloneSearchOptions = new PaginatedSearchOptions(searchOptions);
+    //PaginatedSearchOptions cloneSearchOptions = Object.assign({}, searchOptions);
+    cloneSearchOptions['query'] = searchOptions['geoquery'] + ' +' + searchOptions['query'];
     this.service.search(
-      searchOptions,
+      cloneSearchOptions,
       undefined,
       this.useCachedVersionIfAvailable,
       true,
