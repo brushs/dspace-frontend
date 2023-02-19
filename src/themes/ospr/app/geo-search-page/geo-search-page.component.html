@@ -16,27 +16,13 @@
     <div class="map"  id="map" style="width: 580px; height: 500px;"></div>
     <div class="mx-0 col-12">
         <h3 class="col-8 px-0 height">{{name}}</h3>
-
         <div class="row">
-          <div class="col-sm-1">South:</div>
-          <div class="col-sm-2">
-            <input
-              class="form-control l form-control-sm"
-              type="text"
-              value="{{ lat1 }}"
-            />
-          </div>
-          <div class="col-sm-1">West:</div>
-          <div class="col-sm-2">
-            <input
-              class="form-control l form-control-sm"
-              type="text"
-              value="{{ lng1 }}"
-            />
-          </div>
-        </div>
+          <div class="col-sm-2"></div>
 
+        </div>  
+        <!-- North  -->
         <div class="row">
+          <div class="col-sm-2"></div>
           <div class="col-sm-1">North:</div>
           <div class="col-sm-2">
             <input
@@ -45,6 +31,21 @@
               value="{{ lat2 }}"
             />
           </div>
+        </div>
+        <!-- space row -->
+        <div class="row"><div class="col-12"> &nbsp;</div></div>
+        <!-- East and West -->
+        <div class="row">
+          <div class="col-sm-1">West:</div>
+          <div class="col-sm-2">
+            <input
+              class="form-control l form-control-sm"
+              type="text"
+              value="{{ lng1 }}"
+            />
+          </div>
+        
+          <div class="col-sm-2"></div>
           <div class="col-sm-1">East:</div>
           <div class="col-sm-2">
             <input
@@ -53,6 +54,21 @@
               value = "{{ lng2}}"
             />
           </div>
+        </div>
+        <div class="row"><div class="col-12"> &nbsp;</div></div>
+        <!-- South -->
+        <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-1">South:</div>
+          <div class="col-sm-2">
+            <input
+              class="form-control l form-control-sm"
+              type="text"
+              value="{{ lat1 }}"
+            />
+          </div>
+          <div class="col-sm-2"></div>
+
         </div>
 
         <hr class="solid">
