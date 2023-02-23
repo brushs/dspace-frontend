@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Inject, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+//import {MatRadioModule } from '@angular';
 
 import { BehaviorSubject, combineLatest, Observable, Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged, filter, map, switchMap } from 'rxjs/operators';
@@ -204,6 +205,7 @@ export class MySearchComponent implements OnInit {
   sub: Subscription;
 
   //gdata: any;
+  selectedOp: String = 'AND';
   @ViewChild(GeoSearchPageComponent) geoComponent: GeoSearchPageComponent;
 
   /**
@@ -220,6 +222,9 @@ export class MySearchComponent implements OnInit {
    * Emits event when the user select result entry
    */
   @Output() selectObject: EventEmitter<ListableObject> = new EventEmitter<ListableObject>();
+
+  // author for query
+  author: string = '';
 
   constructor(protected service: SearchService,
               protected sidebarService: SidebarService,
@@ -288,6 +293,14 @@ export class MySearchComponent implements OnInit {
           sort: sortOption || searchOptions.sort
         });
       const newSearchOptions = new PaginatedSearchOptions(combinedOptions);
+      if (this.geoComponent != null) {
+        var geodata = this.geoComponent.getGeoData();
+        var [lat1,lng1,lat2,lng2] = geodata.split(',');
+        var geoquery = 'nrcan.geospatial.bbox:[' + lat1 +','+ lng1 + ' TO '+ lat2+ ','+ lng2 + ']';
+        newSearchOptions['geoquery'] = geoquery;
+        newSearchOptions['boolOp'] = this.selectedOp;
+      }
+
       // check if search options are changed
       // if so retrieve new related results otherwise skip it
       if (JSON.stringify(newSearchOptions) !== JSON.stringify(this.searchOptions$.value)) {
@@ -305,8 +318,10 @@ export class MySearchComponent implements OnInit {
         var geoquery = 'nrcan.geospatial.bbox:[' + lat1 +','+ lng1 + ' TO '+ lat2+ ','+ lng2 + ']';
         console.log("###" + geodata);
         newSearchOptions['geoquery'] = geoquery;
+        newSearchOptions['author'] = this.author;
         //newSearchOptions['query'] = newquery;
         //newSearchOptions['query'] = newquery + ' +' + newSearchOptions['query'];
+        newSearchOptions['boolOp'] = this.selectedOp;
         this.retrieveSearchResults(newSearchOptions);
       }
     });
@@ -367,7 +382,19 @@ export class MySearchComponent implements OnInit {
     this.resultsRD$.next(null);
     var cloneSearchOptions = new PaginatedSearchOptions(searchOptions);
     //PaginatedSearchOptions cloneSearchOptions = Object.assign({}, searchOptions);
-    cloneSearchOptions['query'] = searchOptions['geoquery'] + ' +' + searchOptions['query'];
+    //cloneSearchOptions['query'] = searchOptions['geoquery'] + ' +' + searchOptions['query'];
+    var boolOp = searchOptions['boolOp'];
+    if (searchOptions['query'] == null || searchOptions['query'] == undefined || searchOptions['query'] == '')
+      cloneSearchOptions['query'] = searchOptions['geoquery'];
+    else
+      if (boolOp == 'OR') 
+        cloneSearchOptions['query'] = searchOptions['geoquery'] + ' OR ' + searchOptions['query'];
+      else
+        cloneSearchOptions['query'] = searchOptions['geoquery'] + ' ' + searchOptions['query'];
+
+
+    
+    //cloneSearchOptions['query'] = searchOptions['geoquery'];// + ' |' + searchOptions['query'];
     this.service.search(
       cloneSearchOptions,
       undefined,
