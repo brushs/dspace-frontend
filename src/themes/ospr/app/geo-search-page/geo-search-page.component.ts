@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectorRef } from '@angular/core';
 
 import 'leaflet-geosearch/dist/geosearch.css';
 //declare const L: any; // --> Works
@@ -54,7 +54,7 @@ export class GeoSearchPageComponent implements OnInit {
   @Input() geodata: any;
 
 
-  constructor() { }
+  constructor(private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.map = L.map('map').setView([this.lat, this.lon], 7);
@@ -151,6 +151,7 @@ export class GeoSearchPageComponent implements OnInit {
     this.lat2 = tr.lat.toFixed(5);
     this.lng2 = tr.lng.toFixed(5);
     this.geodata = this.lat1 + ',' + this.lng1 + ',' + this.lat2 + ',' + this.lng2;
+    this.cdr.detectChanges();
   }
 
   onShow() {
