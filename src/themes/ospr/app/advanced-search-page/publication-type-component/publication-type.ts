@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'department-combo-box',
-  templateUrl: './department.component.html',
+  templateUrl: './publication-type.component.html',
   styles: [`
     select {
       padding: 10px;
