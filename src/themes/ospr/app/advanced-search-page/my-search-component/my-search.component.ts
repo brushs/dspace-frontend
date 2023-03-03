@@ -35,7 +35,7 @@ import { ListableObject } from '../../../../../app/shared/object-collection/shar
 import { CollectionElementLinkType } from '../../../../../app/shared/object-collection/collection-element-link.type';
 import { environment } from 'src/environments/environment';
 import { GeoSearchPageComponent } from '../../geo-search-page/geo-search-page.component';
-import { DepartmentComponent } from '../department-component/department.component';
+import { DepartmentComponent } from '../publication-type-component/department.component';
 
 @Component({
   selector: 'ds-search',

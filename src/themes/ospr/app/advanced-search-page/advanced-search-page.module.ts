@@ -15,7 +15,7 @@ import { AdvancedSearchPageComponent } from './advanced-search-page.component';
 import { MyThemedSearchComponent } from './mythemed-search.component';
 import { MySearchComponent } from './my-search-component/my-search.component';
 import { GeoSearchPageComponent } from '../geo-search-page/geo-search-page.component';
-import { DepartmentComponent } from './department-component/department.component';
+import { DepartmentComponent } from './publication-type-component/department.component';
 import { MySearchResultsComponent} from './my-search-component/my-search.results';
 
 const components = [
