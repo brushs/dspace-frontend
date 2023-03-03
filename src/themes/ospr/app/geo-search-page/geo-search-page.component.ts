@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, Input, Output, ChangeDetectorRef, EventEmitter } from '@angular/core';
 
 import 'leaflet-geosearch/dist/geosearch.css';
 //declare const L: any; // --> Works
@@ -52,6 +52,7 @@ export class GeoSearchPageComponent implements OnInit {
   lat2: any;
   lng2: any;
   @Input() geodata: any;
+  @Output() geoChangeEvent = new EventEmitter<string>();  
 
 
   constructor(private cdr: ChangeDetectorRef) { }
@@ -152,6 +153,8 @@ export class GeoSearchPageComponent implements OnInit {
     this.lng2 = tr.lng.toFixed(5);
     this.geodata = this.lat1 + ',' + this.lng1 + ',' + this.lat2 + ',' + this.lng2;
     this.cdr.detectChanges();
+    //this.geoChangeEvent.emit(this.geodata);
+    this.geoChangeEvent.emit("geoChanged");
   }
 
   onShow() {

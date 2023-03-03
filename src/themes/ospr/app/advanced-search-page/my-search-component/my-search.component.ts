@@ -174,6 +174,8 @@ export class MySearchComponent implements OnInit {
    */
   searchOptions$: BehaviorSubject<PaginatedSearchOptions> = new BehaviorSubject<PaginatedSearchOptions>(null);
 
+
+  geoChange$:BehaviorSubject<string> = new BehaviorSubject<string>(null);
   /**
    * The available sort options list
    */
@@ -207,6 +209,7 @@ export class MySearchComponent implements OnInit {
   //gdata: any;
   selectedOp: String = 'AND';
   @ViewChild(GeoSearchPageComponent) geoComponent: GeoSearchPageComponent;
+  @ViewChild(DepartmentComponent) departmentComponent: DepartmentComponent;
 
   /**
    * Emits an event with the current search result entries
@@ -278,14 +281,16 @@ export class MySearchComponent implements OnInit {
       distinctUntilChanged()
     );
     const searchOptions$: Observable<PaginatedSearchOptions> = this.getSearchOptions().pipe(distinctUntilChanged());
+    const geoChange$ = this.geoChange$;
 
-    this.sub = combineLatest([configuration$, searchSortOptions$, searchOptions$, sortOption$]).pipe(
-      filter(([configuration, searchSortOptions, searchOptions, sortOption]: [string, SortOptions[], PaginatedSearchOptions, SortOptions]) => {
+
+    this.sub = combineLatest([configuration$, searchSortOptions$, searchOptions$, sortOption$, geoChange$]).pipe(
+      filter(([configuration, searchSortOptions, searchOptions, sortOption, geoChange ]: [string, SortOptions[], PaginatedSearchOptions, SortOptions, string]) => {
         // filter for search options related to instanced paginated id
         return searchOptions.pagination.id === this.paginationId;
       }),
       debounceTime(100)
-    ).subscribe(([configuration, searchSortOptions, searchOptions, sortOption]: [string, SortOptions[], PaginatedSearchOptions, SortOptions]) => {
+    ).subscribe(([configuration, searchSortOptions, searchOptions, sortOption, geoChange]: [string, SortOptions[], PaginatedSearchOptions, SortOptions,string]) => {
       // Build the PaginatedSearchOptions object
       const combinedOptions = Object.assign({}, searchOptions,
         {
@@ -313,11 +318,19 @@ export class MySearchComponent implements OnInit {
         this.initialized$.next(true);
         // retrieve results
         console.log('retrieveSearchResults');
-        var geodata = this.geoComponent.getGeoData();
-        var [lat1,lng1,lat2,lng2] = geodata.split(',');
-        var geoquery = 'nrcan.geospatial.bbox:[' + lat1 +','+ lng1 + ' TO '+ lat2+ ','+ lng2 + ']';
-        console.log("###" + geodata);
-        newSearchOptions['geoquery'] = geoquery;
+        var geodata  = null;
+        if (this.geoComponent != null) { 
+          geodata = this.geoComponent.getGeoData();
+          var [lat1,lng1,lat2,lng2] = geodata.split(',');
+          var geoquery = 'nrcan.geospatial.bbox:[' + lat1 +','+ lng1 + ' TO '+ lat2+ ','+ lng2 + ']';
+          console.log("###" + geodata);
+          newSearchOptions['geoquery'] = geoquery;
+        }
+        var publicationType = null;
+        if (this.departmentComponent != null) {
+          publicationType = this.departmentComponent.getData();
+          newSearchOptions['publicationType'] = publicationType;
+        }
         newSearchOptions['author'] = this.author;
         //newSearchOptions['query'] = newquery;
         //newSearchOptions['query'] = newquery + ' +' + newSearchOptions['query'];
@@ -327,6 +340,13 @@ export class MySearchComponent implements OnInit {
     });
   }
 
+  onGeoChanged(value: string) {
+    console.log("###" + value);
+    this.searchOptions$.value['geoquery'] = value;
+    this.searchOptions$.next(this.searchOptions$.value);
+    this.geoChange$.next(value);
+  }
+    
   /**
    * Change the current context
    * @param context
@@ -390,7 +410,7 @@ export class MySearchComponent implements OnInit {
       if (boolOp == 'OR') 
         cloneSearchOptions['query'] = searchOptions['geoquery'] + ' OR ' + searchOptions['query'];
       else
-        cloneSearchOptions['query'] = searchOptions['geoquery'] + ' ' + searchOptions['query'];
+        cloneSearchOptions['query'] = searchOptions['geoquery'] + ' ' + searchOptions['query'] + ' dc.type:' + searchOptions['publicationType'];
 
 
     

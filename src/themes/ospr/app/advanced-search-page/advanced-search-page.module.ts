@@ -16,6 +16,7 @@ import { MyThemedSearchComponent } from './mythemed-search.component';
 import { MySearchComponent } from './my-search-component/my-search.component';
 import { GeoSearchPageComponent } from '../geo-search-page/geo-search-page.component';
 import { DepartmentComponent } from './department-component/department.component';
+import { MySearchResultsComponent} from './my-search-component/my-search.results';
 
 const components = [
   //SearchPageComponent,
@@ -25,7 +26,8 @@ const components = [
   MyThemedSearchComponent,
   MySearchComponent,
   GeoSearchPageComponent,
-  DepartmentComponent
+  DepartmentComponent,
+  MySearchResultsComponent
 ];
 
 @NgModule({

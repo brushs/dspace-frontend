@@ -33,8 +33,8 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-2 m-3">
-            Department
+        <div class="col-3 m-3">
+            Publication Type
         </div>
         <div class="col-8 m-3">
             <department-combo-box></department-combo-box>
@@ -68,7 +68,7 @@
     <!-- Geo spatial -->
     <div class="row">
         <div class="col-12">
-        <geo-search-page></geo-search-page>
+        <geo-search-page (geoChangeEvent) = "onGeoChanged($event)"></geo-search-page>
         </div>
     </div>
     <div class="row">
@@ -81,7 +81,7 @@
                         | translate}}
                 </button>
             </div>
-            <ds-search-results [searchResults]="resultsRD$ | async"
+            <my-ds-search-results [searchResults]="resultsRD$ | async"
                                [searchConfig]="searchOptions$ | async"
                                [configuration]="(currentConfiguration$ | async)"
                                [disableHeader]="!searchEnabled"
@@ -90,13 +90,13 @@
                                [selectable]="selectable"
                                [selectionConfig]="selectionConfig"
                                (deselectObject)="deselectObject.emit($event)"
-                               (selectObject)="selectObject.emit($event)"></ds-search-results>
+                               (selectObject)="selectObject.emit($event)"></my-ds-search-results>
         </div>
     </div>
 </ng-template>
 
 <ng-template #sidebarContent>
-   <!-- <ds-search-sidebar id="search-sidebar" *ngIf="!(isXsOrSm$ | async)"
+   <ds-search-sidebar id="search-sidebar" *ngIf="!(isXsOrSm$ | async)"
                        [configurationList]="configurationList"
                        [configuration]="(currentConfiguration$ | async)"
                        [currentScope]="(currentScope$ | async)"
@@ -122,7 +122,7 @@
                        (toggleSidebar)="closeSidebar()"
                        (changeConfiguration)="changeContext($event.context)"
                        (changeViewMode)="changeViewMode()">
-    </ds-search-sidebar> -->
+    </ds-search-sidebar> 
 </ng-template>
 
 <ng-template #searchForm>
