@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { CommonModule } from "@angular/common";
 import { SearchResultsComponent } from "../../../../../app/shared/search/search-results/search-results.component";
 
 
