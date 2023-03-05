@@ -36,6 +36,7 @@ import { CollectionElementLinkType } from '../../../../../app/shared/object-coll
 import { environment } from 'src/environments/environment';
 import { GeoSearchPageComponent } from '../../geo-search-page/geo-search-page.component';
 import { DepartmentComponent } from '../publication-type-component/publication-type';
+import { QueueRounded } from '@material-ui/icons';
 
 @Component({
   selector: 'ds-search',
@@ -208,6 +209,7 @@ export class MySearchComponent implements OnInit {
 
   //gdata: any;
   selectedOp: String = 'AND';
+  query: string = '';
   @ViewChild(GeoSearchPageComponent) geoComponent: GeoSearchPageComponent;
   @ViewChild(DepartmentComponent) departmentComponent: DepartmentComponent;
 
@@ -302,6 +304,9 @@ export class MySearchComponent implements OnInit {
         var geodata = this.geoComponent.getGeoData();
         var [lat1,lng1,lat2,lng2] = geodata.split(',');
         var geoquery = 'nrcan.geospatial.bbox:[' + lat1 +','+ lng1 + ' TO '+ lat2+ ','+ lng2 + ']';
+        if (lat1 == undefined || lng1 == undefined || lat2 == undefined || lng2 == undefined) {
+          geoquery = ''; // reset geoquery
+        }
         newSearchOptions['geoquery'] = geoquery;
         newSearchOptions['boolOp'] = this.selectedOp;
       }
@@ -319,10 +324,13 @@ export class MySearchComponent implements OnInit {
         // retrieve results
         //console.log('retrieveSearchResults');
         var geodata  = null;
-        if (this.geoComponent != null && this.geoComponent.getGeoData() != null) { 
+        if (this.geoComponent != null && this.geoComponent.getGeoData() != null && this.geoComponent.getGeoData() != '')  { 
           geodata = this.geoComponent.getGeoData();
           var [lat1,lng1,lat2,lng2] = geodata.split(',');
           var geoquery = 'nrcan.geospatial.bbox:[' + lat1 +','+ lng1 + ' TO '+ lat2+ ','+ lng2 + ']';
+          if (lat1 == undefined || lng1 == undefined || lat2 == undefined || lng2 == undefined) {
+            geoquery = ''; // reset geoquery
+          }
           //console.log("###" + geodata);
           newSearchOptions['geoquery'] = geoquery;
         }
@@ -332,7 +340,7 @@ export class MySearchComponent implements OnInit {
           newSearchOptions['publicationType'] = publicationType;
         }
         newSearchOptions['author'] = this.author;
-        //newSearchOptions['query'] = newquery;
+        newSearchOptions['query'] = this.query;
         //newSearchOptions['query'] = newquery + ' +' + newSearchOptions['query'];
         newSearchOptions['boolOp'] = this.selectedOp;
         this.retrieveSearchResults(newSearchOptions);
@@ -463,5 +471,11 @@ export class MySearchComponent implements OnInit {
     return this.service.getSearchLink();
   }
 
+  getQuery(event:any): string {
+    var query = event.query;
+    this.query = query;
+    console.log('getQuery:' + query);
+    return query;
+  }
 
 }
