@@ -317,13 +317,13 @@ export class MySearchComponent implements OnInit {
         this.searchOptions$.next(newSearchOptions);
         this.initialized$.next(true);
         // retrieve results
-        console.log('retrieveSearchResults');
+        //console.log('retrieveSearchResults');
         var geodata  = null;
         if (this.geoComponent != null) { 
           geodata = this.geoComponent.getGeoData();
           var [lat1,lng1,lat2,lng2] = geodata.split(',');
           var geoquery = 'nrcan.geospatial.bbox:[' + lat1 +','+ lng1 + ' TO '+ lat2+ ','+ lng2 + ']';
-          console.log("###" + geodata);
+          //console.log("###" + geodata);
           newSearchOptions['geoquery'] = geoquery;
         }
         var publicationType = null;
@@ -403,14 +403,25 @@ export class MySearchComponent implements OnInit {
     var cloneSearchOptions = new PaginatedSearchOptions(searchOptions);
     //PaginatedSearchOptions cloneSearchOptions = Object.assign({}, searchOptions);
     //cloneSearchOptions['query'] = searchOptions['geoquery'] + ' +' + searchOptions['query'];
-    var boolOp = searchOptions['boolOp'];
-    if (searchOptions['query'] == null || searchOptions['query'] == undefined || searchOptions['query'] == '')
-      cloneSearchOptions['query'] = searchOptions['geoquery'];
+    var publicationTypeQuery: string;
+    var geospatialQuery: string;
+    var originalQuery: string;
+
+    if (searchOptions['publicationType'] != null && searchOptions['publicationType'] != undefined && searchOptions['publicationType'] != '')
+      publicationTypeQuery = ' dc.type:' + searchOptions['publicationType'];
     else
-      if (boolOp == 'OR') 
-        cloneSearchOptions['query'] = searchOptions['geoquery'] + ' OR ' + searchOptions['query'];
-      else
-        cloneSearchOptions['query'] = searchOptions['geoquery'] + ' ' + searchOptions['query'] + ' dc.type:' + searchOptions['publicationType'];
+      publicationTypeQuery = '';
+
+    if (searchOptions['query'] == null || searchOptions['query'] == undefined || searchOptions['query'] == '')
+      originalQuery = '';
+    else
+      originalQuery = ' ' + searchOptions['query'];
+
+    geospatialQuery = searchOptions['geoquery'];
+    //var boolOp = searchOptions['boolOp'];
+    cloneSearchOptions['query'] = geospatialQuery + originalQuery + publicationTypeQuery;
+
+    console.log('query:' + cloneSearchOptions['query']);
 
 
     
