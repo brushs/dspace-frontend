@@ -14,6 +14,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DepartmentComponent implements OnInit {
   items = [
+    { name: '', value: '' }, 
     { name: 'Animation', value: 'Animation' }, 
     { name: 'Article', value: 'Article' }, 
     { name: 'Book', value: 'Book' }, 
