@@ -298,7 +298,7 @@ export class MySearchComponent implements OnInit {
           sort: sortOption || searchOptions.sort
         });
       const newSearchOptions = new PaginatedSearchOptions(combinedOptions);
-      if (this.geoComponent != null) {
+      if (this.geoComponent != null && this.geoComponent.getGeoData() != null) {
         var geodata = this.geoComponent.getGeoData();
         var [lat1,lng1,lat2,lng2] = geodata.split(',');
         var geoquery = 'nrcan.geospatial.bbox:[' + lat1 +','+ lng1 + ' TO '+ lat2+ ','+ lng2 + ']';
@@ -319,7 +319,7 @@ export class MySearchComponent implements OnInit {
         // retrieve results
         //console.log('retrieveSearchResults');
         var geodata  = null;
-        if (this.geoComponent != null) { 
+        if (this.geoComponent != null && this.geoComponent.getGeoData() != null) { 
           geodata = this.geoComponent.getGeoData();
           var [lat1,lng1,lat2,lng2] = geodata.split(',');
           var geoquery = 'nrcan.geospatial.bbox:[' + lat1 +','+ lng1 + ' TO '+ lat2+ ','+ lng2 + ']';
@@ -412,12 +412,15 @@ export class MySearchComponent implements OnInit {
     else
       publicationTypeQuery = '';
 
-    if (searchOptions['query'] == null || searchOptions['query'] == undefined || searchOptions['query'] == '')
+    if (searchOptions['query'] == null || searchOptions['query'] == undefined)
       originalQuery = '';
     else
       originalQuery = ' ' + searchOptions['query'];
 
-    geospatialQuery = searchOptions['geoquery'];
+    if (searchOptions['geoquery'] == null || searchOptions['geoquery'] == undefined)
+      geospatialQuery = '';
+    else
+      geospatialQuery = searchOptions['geoquery'];
     //var boolOp = searchOptions['boolOp'];
     cloneSearchOptions['query'] = geospatialQuery + originalQuery + publicationTypeQuery;
 
