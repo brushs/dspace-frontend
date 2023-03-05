@@ -138,6 +138,15 @@ export class GeoSearchPageComponent implements OnInit {
       app.drawnItems.addLayer(layer);
       console.log("draw");
     });
+
+    this.map.on('draw:deleted', function (e) {
+      app.lat1 = '';  
+      app.lng1 = '';
+      app.lat2 = '';
+      app.lng2 = '';
+      app.geodata = '';
+      console.log("geo data deleted");
+    });
   }
 
   private updateData(value: any) {
