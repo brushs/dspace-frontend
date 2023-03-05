@@ -12,7 +12,7 @@ import { SearchResultsComponent } from "../../../../../app/shared/search/search-
 export class MySearchResultsComponent extends SearchResultsComponent {
 
 isLoading() {
-    console.log('isLoading');
+    //console.log('isLoading');
     return false;
   }
 }
