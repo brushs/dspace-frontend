@@ -327,7 +327,8 @@ export class MySearchComponent implements OnInit {
         if (this.geoComponent != null && this.geoComponent.getGeoData() != null && this.geoComponent.getGeoData() != '')  { 
           geodata = this.geoComponent.getGeoData();
           var [lat1,lng1,lat2,lng2] = geodata.split(',');
-          var geoquery = 'nrcan.geospatial.bbox:[' + lat1 +','+ lng1 + ' TO '+ lat2+ ','+ lng2 + ']';
+          //var geoquery = 'nrcan.geospatial.bbox:[' + lat1 +','+ lng1 + ' TO '+ lat2+ ','+ lng2 + ']';
+          var geoquery = 'geospatial.bbox:[' + lat1 +','+ lng1 + ' TO '+ lat2+ ','+ lng2 + ']';
           if (lat1 == undefined || lng1 == undefined || lat2 == undefined || lng2 == undefined) {
             geoquery = ''; // reset geoquery
           }
