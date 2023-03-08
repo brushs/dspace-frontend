@@ -17,6 +17,8 @@ import { MySearchComponent } from './my-search-component/my-search.component';
 import { GeoSearchPageComponent } from '../geo-search-page/geo-search-page.component';
 import { DepartmentComponent } from './publication-type-component/publication-type';
 import { MySearchResultsComponent} from './my-search-component/my-search.results';
+import { NrcanLoginComponent} from '../login-page/log-in/nrcan-log-in.component'
+import { LoginPageComponent} from '../login-page/login-page.component'
 
 const components = [
   //SearchPageComponent,
@@ -27,7 +29,9 @@ const components = [
   MySearchComponent,
   GeoSearchPageComponent,
   DepartmentComponent,
-  MySearchResultsComponent
+  MySearchResultsComponent,
+  NrcanLoginComponent,
+  LoginPageComponent
 ];
 
 @NgModule({

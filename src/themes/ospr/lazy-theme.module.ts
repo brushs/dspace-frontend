@@ -102,7 +102,7 @@ const DECLARATIONS = [
   CollectionPageComponent,
   ItemPageComponent,
   FullItemPageComponent,
-  LoginPageComponent,
+  //LoginPageComponent,
   LogoutPageComponent,
   CreateProfileComponent,
   ForgotEmailComponent,
