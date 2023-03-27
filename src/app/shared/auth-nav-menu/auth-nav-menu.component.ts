@@ -1,4 +1,6 @@
 import { Observable, of as observableOf, Subscription } from 'rxjs';
+import { HttpClient ,HttpHeaders, HttpResponse} from '@angular/common/http';  
+import { environment } from '../../../environments/environment';
 
 import { filter, map } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
@@ -25,6 +27,11 @@ export class AuthNavMenuComponent implements OnInit {
    * @type {Observable<string>}
    */
   public isAuthenticated: Observable<boolean>;
+  public isIpValid: Observable<boolean>;
+  //private ipUrl = 'http://localhost:8080/server/api/authn/validateip';
+
+  //public isValid = false;
+  public passwordLogin = environment.auth?.login?.enablePassword;
 
   /**
    * True if the authentication is loading.
@@ -42,11 +49,21 @@ export class AuthNavMenuComponent implements OnInit {
 
   constructor(private store: Store<AppState>,
               private windowService: HostWindowService,
-              private authService: AuthService
+              private authService: AuthService,
+              private http: HttpClient
   ) {
     this.isXsOrSm$ = this.windowService.isXsOrSm();
   }
 
+  //getIp(): Observable<any> {
+  //  return this.http.get(this.ipUrl, {responseType: 'text'})
+  //  //return this.http.get<any>(this.ipUrl, { responseTye: 'text'});
+  //}
+
+  //checkIp(ipAddress:string): boolean {
+  //  return true;
+  //}
+  
   ngOnInit(): void {
     // set isAuthenticated
     this.isAuthenticated = this.store.pipe(select(isAuthenticated));
@@ -63,5 +80,14 @@ export class AuthNavMenuComponent implements OnInit {
         && !router.state.url.startsWith(LOGOUT_ROUTE))
       )
     );
+
+    //this.getIp().subscribe(data => {
+    //  var response:string= data;
+    //  //check if ip is valid
+    //  console.log("###response:"+response)
+    //  this.isValid = true;
+    //  //this.isIpValid = this.checkIp(ipAddress);
+    //}
+    //);
   }
 }
