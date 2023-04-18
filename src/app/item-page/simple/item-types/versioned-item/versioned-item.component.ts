@@ -28,7 +28,7 @@ export class VersionedItemComponent extends ItemComponent {
   constructor(
     private modalService: NgbModal,
     private versionHistoryService: VersionHistoryDataService,
-    private translateService: TranslateService,
+    protected translateService: TranslateService,
     private versionService: VersionDataService,
     private itemVersionShared: ItemVersionsSharedService,
     private router: Router,

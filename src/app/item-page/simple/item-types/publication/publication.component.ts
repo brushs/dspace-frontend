@@ -15,5 +15,9 @@ import { VersionedItemComponent } from '../versioned-item/versioned-item.compone
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PublicationComponent extends VersionedItemComponent {
-
+  public currentLanguage: string = 'en';
+  ngOnInit(): void {
+    super.ngOnInit();
+    this.currentLanguage = this.translateService.currentLang;
+  }
 }
