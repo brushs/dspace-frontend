@@ -32,38 +32,35 @@ export class MetadataValuesComponent {
    */
   @Input() language: string;
 
-  active: boolean
-  activeContent: String
+  active: boolean //  active that the logic based on language is applied. Otherwise keep original
+  activeContent: String // the content to be displayed when the active is true
 
   /**
    */
   ngOnInit() {
     // The dc.title is inserted with no lable but with language.
     // This is the condtion to check if the mdValues contains the dc.title
-    this.active = false;
-    if (this.language) 
-      console.log("++ currentLanguage exist: this.currentLanguage = " + this.language);
-    if (this.mdValues && this.mdValues.length > 0) {
+    this.active = false; // default keep orignal
+
+    if (this.mdValues && this.mdValues.length > 0) { // not empty
       var bothLanguages:boolean = false;
       if (this.mdValues.length > 1)  // there are 2 languages
         bothLanguages = true;
+      
       var mdValue0 = this.mdValues[0];
-      if (mdValue0 && mdValue0.language && ! this.label) { // dc.title case
-          console.log("++ language exist: mdValue0.language = " + mdValue0.language);
-          console.log("mdValue0.value = " + mdValue0.value);
-          if (bothLanguages) {
-            this.active = true; // flag on to deal with the 2 languages
+      if (mdValue0 && mdValue0.language && ! this.label) { // dc.title case, at least one mdValue and no label
+
+          if (bothLanguages) { // 2 languages, the new logic is take control
+            this.active = true; // flag on  so the template will display the activeContent
+            // now select the content based on the language
             for (var i = 0; i < this.mdValues.length; i++) {
               var mdValue = this.mdValues[i];
               if ( mdValue.language == this.language) 
-                //this.mdValues.splice(i, 1);
                 this.activeContent = mdValue.value;
             }
           }
       } 
     }
-    console.log("++ mdValues = " + this.mdValues);
-      
 
   }
 
